@@ -113,8 +113,430 @@
                     <button onclick="switchView('home')" class="text-xs uppercase tracking-wider font-semibold text-slate-600 hover:text-clinical-600 transition">Home</button>
                     <a href="#about-us" onclick="switchView('home')" class="text-xs uppercase tracking-wider font-semibold text-slate-600 hover:text-clinical-600 transition">About Us</a>
                     <a href="#curriculum" onclick="switchView('home')" class="text-xs uppercase tracking-wider font-semibold text-slate-600 hover:text-clinical-600 transition">Syllabus</a>
-                    <a href="#" class="text-xs uppercase tracking-wider font-semibold text-slate-600 hover:text-clinical-600 transition">Course Material</a>
-                    <button onclick="switchView('mentors')" class="text-xs uppercase tracking-wider font-semibold text-slate-600 hover:text-clinical-600 transition">Instructors & Mentors</button>
+                    <!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <!-- Botpress Webchat Injection Scripts -->
+    <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2026/06/25/09/20260625095541-9UXJJ8UK.js" defer></script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Masterclass for Clinicians - Portfolio & Syllabus Hub</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display (Editorial Serif) & Inter (Clean Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght=300;400;500;600;700;800&family=Playfair+Display:ital,wght=0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        clinical: {
+                            50: '#fff5f5',
+                            100: '#ffe3e3',
+                            200: '#ffc9c9',
+                            300: '#ffa3a3',
+                            400: '#ff6b6b',
+                            500: '#fa5252',
+                            600: '#cc0a0a', /* Exact Chatbot Red */
+                            700: '#b00808', /* Deeper interactive hover state */
+                            800: '#820505',
+                            900: '#4a0202',
+                        },
+                        navy: {
+                            50: '#f0f4f8',
+                            100: '#d9e2ec',
+                            200: '#bcccdc',
+                            300: '#9fb3c8',
+                            450: '#627d98',
+                            600: '#334e68',
+                            700: '#243b53',
+                            800: '#102a43', 
+                            900: '#0b1b2b', 
+                            950: '#06101a',
+                        }
+                    }
+                }
+            }
+        }
+        // Simple Single Page App View Router
+        function switchView(viewId) {
+            const homeView = document.getElementById('home-view');
+            const mentorsView = document.getElementById('mentors-view');
+            
+            if (viewId === 'mentors') {
+                homeView.classList.add('hidden');
+                mentorsView.classList.remove('hidden');
+                window.scrollTo(0, 0);
+            } else {
+                mentorsView.classList.add('hidden');
+                homeView.classList.remove('hidden');
+                window.scrollTo(0, 0);
+            }
+        }
+        // Play Intro Video & Swap Custom Thumbnail
+        function playIntroVideo() {
+            const overlay = document.getElementById('video-overlay');
+            const container = document.getElementById('vimeo-player-container');
+            if (overlay && container) {
+                overlay.classList.add('hidden');
+                container.classList.remove('hidden');
+                container.innerHTML = `<iframe src="https://player.vimeo.com/video/1207604094?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Welcome to Newlands Research Masterclass"></iframe>`;
+            }
+        }
+    </script>
+    
+    <style>
+        .bg-grid-pattern {
+            background-size: 24px 24px;
+            background-image: linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+        }
+        .bg-dark-grid-pattern {
+            background-size: 24px 24px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+        .shadow-clinical-soft {
+            box-shadow: 0 4px 30px -4px rgba(11, 27, 43, 0.03), 0 2px 10px -2px rgba(190, 18, 60, 0.02);
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-800 font-sans antialiased overflow-x-hidden m-0 p-0 box-border">
+    <!-- Sticky Institutional Navigation Header -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/95 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo Block -->
+                <div class="flex items-center cursor-pointer" onclick="switchView('home')">
+                    <img src="nc-logo.png" alt="Newlands Clinic Logo" class="h-14 sm:h-16 w-auto object-contain">
+                </div>
+                
+                <!-- Desktop Navigation Links -->
+              <nav class="hidden lg:flex items-center space-x-8">
+    <button onclick="switchView('home')" class="text-xs uppercase tracking-wider font-semibold text-slate-600 hover:text-clinical-600 transition">Home</button>
+    <a href="#about-us" onclick="switchView('home')" class="text-xs uppercase tracking-wider font-semibold text-slate-600 hover:text-clinical-600 transition">About Us</a>
+    <a href="#curriculum" onclick="switchView('home')" class="text-xs uppercase tracking-wider font-semibold text-slate-600 hover:text-clinical-600 transition">Syllabus</a>
+    
+    <a href="course-material-hub.html" class="text-xs uppercase tracking-wider font-semibold text-slate-600 hover:text-clinical-600 transition">Course Material</a>
+</nav>
+                <!-- Action Button -->
+                <div class="flex items-center space-x-4">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKfdYu5QoGLaVBjnap2C-2eWHKIxW41gjcARHZ33Of7cQe7Q/viewform?usp=dialog" target="_blank" class="bg-clinical-600 hover:bg-clinical-700 text-white px-5 py-2.5 rounded text-xs uppercase tracking-wider font-bold shadow-sm transition">
+                        Express Interest
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- MAIN HOME VIEW CONTAINER -->
+    <div id="home-view">
+        <!-- Hero / Institutional Intro Section -->
+        <section class="relative flex items-center py-16 lg:py-24 overflow-hidden bg-slate-50 border-b border-slate-200 bg-grid-pattern">
+            <div class="absolute top-1/4 right-0 w-[450px] h-[450px] bg-rose-50/60 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute bottom-12 left-0 w-96 h-96 bg-navy-50/55 rounded-full blur-2xl pointer-events-none"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 bg-clinical-50 border border-clinical-200 px-3.5 py-1.5 rounded text-[11px] font-extrabold text-clinical-700 uppercase tracking-wider">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            A 12-Week Online Training Programme
+                        </div>
+                        <!-- Live Class Zoom Quick Link Notice -->
+                        <div class="p-3 bg-red-50 border border-clinical-200 rounded-md flex flex-col sm:flex-row items-center justify-between gap-3 text-left max-w-2xl mx-auto lg:mx-0">
+                            <div class="flex items-center gap-2.5">
+                                <span class="flex h-2.5 w-2.5 relative">
+                                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-clinical-400 opacity-75"></span>
+                                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-clinical-600"></span>
+                                </span>
+                                <span class="text-xs font-semibold text-slate-700">Live 12-Week Session Zoom Link</span>
+                            </div>
+                            <a href="https://us06web.zoom.us/j/86797857161?pwd=woNfLtiNba8xL0Deg57l7IbPcyCqbj.1" target="_blank" class="bg-clinical-600 hover:bg-clinical-700 text-white text-[10px] uppercase tracking-wider font-bold px-3.5 py-1.5 rounded transition inline-flex items-center gap-1 shadow-sm">
+                                <i class="fa-solid fa-video"></i> Login to Zoom
+                            </a>
+                        </div>
+                        
+                        <h1 class="font-serif font-extrabold text-4xl sm:text-5xl lg:text-6xl text-navy-900 leading-[1.1] tracking-tight">
+                            Research Masterclass <br>
+                            <span class="text-clinical-600 font-normal italic">for Clinicians</span>
+                        </h1>
+                        <p class="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
+                            Foundations in Epidemiology, Statistics, and Scientific Writing. Empowering clinical observers to confidently transition into lead researchers with sound analytical pipelines.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
+                            <button onclick="switchView('mentors')" class="bg-clinical-600 hover:bg-clinical-700 text-white px-8 py-3.5 rounded font-bold text-xs uppercase tracking-wider shadow-md text-center transition duration-300">
+                                Meet Instructors & Mentors
+                            </button>
+                            <a href="https://us06web.zoom.us/j/86797857161?pwd=woNfLtiNba8xL0Deg57l7IbPcyCqbj.1" target="_blank" class="border border-slate-300 hover:border-slate-400 bg-white text-slate-700 px-8 py-3.5 rounded font-bold text-xs uppercase tracking-wider shadow-sm text-center transition duration-300 inline-flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-video text-clinical-600"></i> Join Live Classroom
+                            </a>
+                        </div>
+                        <!-- Counters Matrix (Updated to 2 Core Modules) -->
+                        <div class="grid grid-cols-3 gap-6 pt-8 border-t border-slate-200 max-w-md mx-auto lg:mx-0">
+                            <div>
+                                <span class="block text-2xl sm:text-3xl font-serif font-bold text-navy-900">12</span>
+                                <span class="block text-[10px] text-slate-500 uppercase tracking-widest font-semibold">Weeks Online</span>
+                            </div>
+                            <div>
+                                <span class="block text-2xl sm:text-3xl font-serif font-bold text-navy-900">84</span>
+                                <span class="block text-[10px] text-slate-500 uppercase tracking-widest font-semibold">Total Hours</span>
+                            </div>
+                            <div>
+                                <span class="block text-2xl sm:text-3xl font-serif font-bold text-navy-900">2</span>
+                                <span class="block text-[10px] text-slate-500 uppercase tracking-widest font-semibold">Core Modules</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative bg-white border border-slate-200 rounded p-6 sm:p-8 shadow-clinical-soft">
+                            <div class="absolute top-0 left-0 right-0 h-1 bg-clinical-600 rounded-t"></div>
+                            <div class="flex justify-between items-center mb-6">
+                                <span class="text-[10px] font-extrabold text-navy-600 uppercase tracking-wider">Course Competency Index</span>
+                                <span class="px-2.5 py-1 bg-green-50 text-green-700 text-[10px] font-extrabold rounded border border-green-200 uppercase">Registration Open</span>
+                            </div>
+                            <div class="space-y-5">
+                                <div class="space-y-1.5">
+                                    <div class="flex justify-between text-xs font-semibold">
+                                        <span class="text-slate-700">1. Research Design & Epidemiology</span>
+                                        <span class="text-clinical-600">Mastery</span>
+                                    </div>
+                                    <div class="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden">
+                                        <div class="h-full bg-clinical-600 rounded-full" style="width: 100%"></div>
+                                    </div>
+                                </div>
+                                <div class="space-y-1.5">
+                                    <div class="flex justify-between text-xs font-semibold">
+                                        <span class="text-slate-700">2. Applied Statistical Literacy</span>
+                                        <span class="text-navy-800">Applied</span>
+                                    </div>
+                                    <div class="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden">
+                                        <div class="h-full bg-navy-800 rounded-full" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-8 p-4 bg-slate-50 border border-slate-200 rounded relative overflow-hidden">
+                                <span class="text-[10px] uppercase font-extrabold text-navy-800 tracking-wider">Statement of Final Impact</span>
+                                <p class="text-xs text-slate-600 italic mt-2 leading-relaxed">
+                                    "Graduates of the Masterclass will possess the end-to-end skills required to conceptualise a clinical study, descriptively analyse data with precision, and confidently contribute evidence-based findings to medical literature."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Newlands Clinic Section -->
+        <section id="about-us" class="py-20 bg-white relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-7 space-y-6">
+                        <span class="text-xs uppercase font-extrabold text-clinical-600 tracking-widest block">About Us</span>
+                        <h2 class="font-serif font-extrabold text-3xl sm:text-4xl text-navy-900 leading-tight">
+                            Newlands Clinic & The Ruedi Lüthy Foundation
+                        </h2>
+                        <p class="text-slate-600 leading-relaxed font-light text-base">
+                            Funded and operated by the Swiss charitable organisation <strong>Ruedi Lüthy Foundation</strong>, <strong>Newlands Clinic</strong> is an outpatient clinic located in Harare, Zimbabwe. The clinic provides comprehensive, long-term care and treatment to destitute HIV and Aids patients in southern Africa.
+                        </p>
+                        <h3 class="font-serif font-bold text-xl text-navy-900 mt-4">Our Research Department</h3>
+                        <p class="text-slate-600 leading-relaxed font-light text-base">
+                            The Research Department plays a major role in improving complex HIV therapy across southern Africa. By conducting independent research and participating in international scientific studies, our team focuses on enhancing daily patient management.
+                        </p>
+                    </div>
+                    <div class="lg:col-span-5 space-y-6">
+                        <!-- Vimeo Video Embed Card with Custom Thumbnail Overlay -->
+                        <div class="bg-white rounded border border-slate-200 shadow-clinical-soft overflow-hidden">
+                            <div class="p-4 border-b border-slate-200 flex items-center gap-2 text-clinical-600">
+                                <i class="fa-solid fa-circle-play text-lg"></i>
+                                <span class="font-serif font-bold text-base text-navy-900">Introductory Course Video</span>
+                            </div>
+                            <!-- Responsive Video Embed Wrapper -->
+                            <div class="relative w-full aspect-video bg-black" id="video-wrapper">
+                                <!-- Custom Thumbnail Overlay and Play Action -->
+                                <div id="video-overlay" class="absolute inset-0 z-10 cursor-pointer flex items-center justify-center bg-cover bg-center" style="background-image: url('https://raw.githubusercontent.com/researchnewlands/Research/main/Newlands%20Clinic%20Research%20Masterclass.jpg');">
+                                    <!-- Dark Overlay tint for typography / button clarity -->
+                                    <div class="absolute inset-0 bg-black/40 transition hover:bg-black/25"></div>
+                                    <!-- Play Button -->
+                                    <button onclick="playIntroVideo()" class="relative z-20 w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center rounded-full bg-clinical-600 text-white hover:scale-105 transition transform shadow-lg">
+                                        <i class="fa-solid fa-play text-2xl sm:text-3xl ml-1"></i>
+                                    </button>
+                                </div>
+                                <!-- Dynamic Player Destination -->
+                                <div id="vimeo-player-container" class="w-full h-full hidden">
+                                    <!-- Dynamic Vimeo frame will be populated here -->
+                                </div>
+                            </div>
+                            <div class="p-3.5 bg-slate-50 border-t border-slate-100">
+                                <p class="text-[11px] text-slate-500 text-center font-medium">Click to watch the introductory masterclass presentation.</p>
+                            </div>
+                        </div>
+                        <!-- Research Focus Areas Section -->
+                        <div class="bg-slate-50 p-8 rounded border border-slate-200 shadow-clinical-soft">
+                            <div class="flex items-center space-x-2 text-clinical-600 mb-6">
+                                <i class="fa-solid fa-microscope text-2xl"></i>
+                                <span class="font-serif font-bold text-lg text-navy-900">Research Focus Areas</span>
+                            </div>
+                            <ul class="space-y-4 text-slate-600 text-sm">
+                                <li class="flex items-start gap-3">
+                                    <span class="text-clinical-600 mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
+                                    <span><strong>Epidemiology:</strong> Define precise clinical cohorts, cases, and measures of occurrence.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-navy-800 mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
+                                    <span><strong>Inference Statistics:</strong> Master T-tests, Chi-squares, and confidence parameters.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Course Syllabus Preview Section -->
+        <section id="curriculum" class="py-20 bg-navy-900 text-white relative bg-dark-grid-pattern">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs uppercase font-extrabold text-clinical-500 tracking-widest block mb-2">Curriculum Roadmap</span>
+                    <h2 class="font-serif font-extrabold text-3xl sm:text-4xl text-white"> Pillars of Research </h2>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- MODULE 1 -->
+                    <div class="bg-navy-800/80 border border-navy-700 rounded p-8">
+                        <h3 class="font-serif font-bold text-xl text-white mb-2">Research Design & Epidemiology</h3>
+                        <p class="text-clinical-400 text-[10px] font-extrabold uppercase tracking-wider mb-4">Weeks 1 - 6</p>
+                        <p class="text-slate-300 text-sm font-light leading-relaxed">Master foundational principles of population health research, formulate research questions, and design clinical studies.</p>
+                    </div>
+                    <!-- MODULE 2 -->
+                    <div class="bg-navy-800/80 border border-navy-700 rounded p-8">
+                        <h3 class="font-serif font-bold text-xl text-white mb-2">Applied Statistical Literacy</h3>
+                        <p class="text-clinical-400 text-[10px] font-extrabold uppercase tracking-wider mb-4">Weeks 7 - 12</p>
+                        <p class="text-slate-300 text-sm font-light leading-relaxed">Develop analytical literacy to properly evaluate research metrics, avoid bias, and select sound hypothesis tests.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Dynamic Action Intermission Panel -->
+        <section class="py-16 bg-white relative text-center">
+            <div class="max-w-4xl mx-auto px-4">
+                <h3 class="font-serif font-bold text-2xl text-navy-900 mb-3">Ready to Start Your Research Journey?</h3>
+                <p class="text-slate-600 text-sm max-w-xl mx-auto mb-8 font-light">Applications are reviewed on a rolling basis. Click below to open our official enrollment and evaluation portal directly via Google Forms.</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKfdYu5QoGLaVBjnap2C-2eWHKIxW41gjcARHZ33Of7cQe7Q/viewform?usp=dialog" target="_blank" class="inline-flex items-center gap-2 bg-clinical-600 hover:bg-clinical-700 text-white font-bold text-xs uppercase tracking-wider px-8 py-4 rounded shadow transition transform hover:-translate-y-0.5">
+                    Go to Application Form <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                </a>
+            </div>
+        </section>
+    </div>
+    <!-- DEDICATED INSTRUCTORS & MENTORS PAGE VIEW -->
+    <div id="mentors-view" class="hidden bg-slate-50 bg-grid-pattern py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Back Navigation Button Header -->
+            <div class="mb-10">
+                <button onclick="switchView('home')" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-slate-600 hover:text-clinical-600 transition">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Main Page
+                </button>
+            </div>
+            <!-- Page Title Block -->
+            <div class="border-b border-slate-200 pb-8 mb-12">
+                <span class="text-xs uppercase font-extrabold text-clinical-600 tracking-widest block mb-2">Academic Faculty</span>
+                <h1 class="font-serif font-extrabold text-4xl text-navy-900 tracking-tight">Course Instructors & Mentors</h1>
+                <p class="text-slate-600 mt-2 font-light max-w-3xl text-sm sm:text-base">
+                    Meet the research specialists, public health officers, and clinical epidemiologists guiding the Research Masterclass for Clinicians cohort.
+                </p>
+            </div>
+            
+            <!-- Unified Faculty Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Ardele Mandiriri-Ndanga -->
+                <div class="bg-white border border-slate-200 rounded p-6 flex flex-col sm:flex-row gap-6 items-center sm:items-start shadow-sm">
+                    <div class="w-24 h-24 rounded flex-shrink-0 border border-slate-200 overflow-hidden bg-slate-100">
+                        <img src="ardele.jpg" alt="Ardele Mandiriri-Ndanga" class="w-full h-full object-cover">
+                    </div>
+                    <div class="space-y-1 text-center sm:text-left">
+                        <h3 class="font-serif font-bold text-xl text-navy-900">Ardele Mandiriri-Ndanga</h3>
+                        <p class="text-clinical-600 font-medium text-xs uppercase tracking-wider">RM Course Director</p>
+                        <p class="text-slate-500 text-xs font-semibold pt-1">PhD Epidemiologist / Data Analyst & Generative AI Researcher</p>
+                    </div>
+                </div>
+                <!-- Varaidzo Moyo -->
+                <div class="bg-white border border-slate-200 rounded p-6 flex flex-col sm:flex-row gap-6 items-center sm:items-start shadow-sm">
+                    <div class="w-24 h-24 rounded flex-shrink-0 border border-slate-200 overflow-hidden bg-slate-100">
+                        <img src="var.jpg" alt="Varaidzo Moyo" class="w-full h-full object-cover">
+                    </div>
+                    <div class="space-y-1 text-center sm:text-left">
+                        <h3 class="font-serif font-bold text-xl text-navy-900">Varaidzo Moyo</h3>
+                        <p class="text-clinical-600 font-medium text-xs uppercase tracking-wider">RM Course Coordinator</p>
+                        <p class="text-slate-500 text-xs font-semibold pt-1">MSc Public Health / Data Analyst</p>
+                    </div>
+                </div>
+                <!-- Dr. Cleophas Chimbetete -->
+                <div class="bg-white border border-slate-200 rounded p-6 flex flex-col sm:flex-row gap-6 items-center sm:items-start shadow-sm">
+                    <div class="w-24 h-24 rounded flex-shrink-0 border border-slate-200 overflow-hidden bg-slate-100">
+                        <img src="drc.jpg" alt="Dr. Cleophas Chimbetete" class="w-full h-full object-cover">
+                    </div>
+                    <div class="space-y-1 text-center sm:text-left">
+                        <h3 class="font-serif font-bold text-xl text-navy-900">Dr. Cleophas Chimbetete</h3>
+                        <p class="text-clinical-600 text-[11px] font-medium uppercase tracking-wider">RM Instructor</p>
+                        <p class="text-slate-500 text-xs font-semibold pt-1">Director Research & Training <br><span class="font-mono font-semibold">MBCHB, MPH, PhD</span></p>
+                    </div>
+                </div>
+                <!-- Dr. Tinei Shamu -->
+                <div class="bg-white border border-slate-200 rounded p-6 flex flex-col sm:flex-row gap-6 items-center sm:items-start shadow-sm">
+                    <div class="w-24 h-24 rounded flex-shrink-0 border border-slate-200 overflow-hidden bg-slate-100">
+                        <img src="Tinei.jpg" alt="Dr. Tinei Shamu" class="w-full h-full object-cover">
+                    </div>
+                    <div class="space-y-1 text-center sm:text-left">
+                        <h3 class="font-serif font-bold text-xl text-navy-900">Dr. Tinei Shamu</h3>
+                        <p class="text-clinical-600 text-[11px] font-medium uppercase tracking-wider">RM Instructor</p>
+                        <p class="text-slate-500 text-xs font-semibold pt-1">PhD Epidemiologist</p>
+                    </div>
+                </div>
+                <!-- Tinashe Mudzviti -->
+                <div class="bg-white border border-slate-200 rounded p-6 flex flex-col sm:flex-row gap-6 items-center sm:items-start shadow-sm">
+                    <div class="w-24 h-24 rounded flex-shrink-0 border border-slate-200 overflow-hidden bg-slate-100">
+                        <img src="tinash.jpg" alt="Tinashe Mudzviti" class="w-full h-full object-cover">
+                    </div>
+                    <div class="space-y-1 text-center sm:text-left">
+                        <h3 class="font-serif font-bold text-xl text-navy-900">Tinashe Mudzviti</h3>
+                        <p class="text-clinical-600 text-[11px] font-medium uppercase tracking-wider">RM Instructor</p>
+                        <p class="text-slate-500 text-xs font-semibold pt-1">PhD Candidate</p>
+                    </div>
+                </div>
+                <!-- Buntubethu Sydney Malunga -->
+                <div class="bg-white border border-slate-200 rounded p-6 flex flex-col sm:flex-row gap-6 items-center sm:items-start shadow-sm">
+                    <div class="w-24 h-24 rounded flex-shrink-0 border border-slate-200 overflow-hidden bg-slate-100">
+                        <img src="Sydney.jpg" alt="Buntubethu Sydney Malunga" class="w-full h-full object-cover">
+                    </div>
+                    <div class="space-y-1 text-center sm:text-left">
+                        <h3 class="font-serif font-bold text-xl text-navy-900">Buntubethu Sydney Malunga</h3>
+                        <p class="text-clinical-600 text-[10px] font-medium uppercase tracking-wider">RM Course Coordinator Assistant</p>
+                        <p class="text-slate-500 text-xs font-semibold pt-1">Data Analyst</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-navy-950 text-slate-400 text-xs py-8 border-t border-navy-900 clear-both">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-2">
+            <p>&copy; 2026 Newlands Clinic & Ruedi Lüthy Foundation. All rights reserved.</p>
+            <p class="text-slate-600">Harare, Zimbabwe.</p>
+        </div>
+    </footer>
+</body>
+</html>
+>Instructors & Mentors</button>
                 </nav>
                 <!-- Action Button -->
                 <div class="flex items-center space-x-4">
