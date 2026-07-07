@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Material | Research Masterclass</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Tailwind config for custom clinical colors if not already defined
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clinical: { 600: '#d32f2f' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans">
+
+    <!-- Header Navigation (Matches your existing style) -->
+    <nav class="bg-white p-6 shadow-sm flex items-center justify-between">
+        <div class="font-bold text-xl">Newlands Clinic</div>
+        <div class="hidden lg:flex items-center space-x-8">
+            <a href="index.html" class="text-xs uppercase tracking-wider font-semibold text-slate-600 hover:text-clinical-600 transition">Home</a>
+            <a href="course-material-hub.html" class="text-xs uppercase tracking-wider font-semibold text-clinical-600 transition">Course Material</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto py-12 px-6">
+        
+        <!-- Progress Bar -->
+        <div class="mb-12">
+            <div class="flex justify-between mb-2">
+                <span class="text-sm font-semibold text-slate-700">Course Progress</span>
+                <span class="text-sm font-semibold text-clinical-600">0%</span>
+            </div>
+            <div class="w-full bg-slate-200 rounded-full h-3">
+                <div class="bg-clinical-600 h-3 rounded-full" style="width: 0%;"></div>
+            </div>
+        </div>
+
+        <h1 class="text-3xl font-bold mb-8 text-slate-900">Course Curriculum</h1>
+
+        <!-- Modules Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <a href="topic-1-notes.html" class="p-6 bg-white border border-slate-200 rounded-lg hover:border-clinical-600 transition shadow-sm font-semibold">Topic 1: Fundamentals</a>
+            <a href="topic-2-notes.html" class="p-6 bg-white border border-slate-200 rounded-lg hover:border-clinical-600 transition shadow-sm font-semibold">Topic 2</a>
+            <a href="topic-3-notes.html" class="p-6 bg-white border border-slate-200 rounded-lg hover:border-clinical-600 transition shadow-sm font-semibold">Topic 3</a>
+            <a href="topic-4-notes.html" class="p-6 bg-white border border-slate-200 rounded-lg hover:border-clinical-600 transition shadow-sm font-semibold">Topic 4</a>
+            <a href="topic-5-notes.html" class="p-6 bg-white border border-slate-200 rounded-lg hover:border-clinical-600 transition shadow-sm font-semibold">Topic 5</a>
+            
+            <!-- Quiz Card -->
+            <a href="grading-quiz.html" class="p-6 bg-white border-2 border-clinical-600 rounded-lg hover:bg-red-50 transition shadow-md font-bold text-clinical-700 flex items-center justify-center">
+                FINAL GRADING QUIZ
+            </a>
+        </div>
+    </main>
+
+</body>
+</html>
