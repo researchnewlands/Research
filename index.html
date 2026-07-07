@@ -70,6 +70,17 @@
                 window.scrollTo(0, 0);
             }
         }
+
+        // Play Intro Video & Swap Custom Thumbnail
+        function playIntroVideo() {
+            const overlay = document.getElementById('video-overlay');
+            const container = document.getElementById('vimeo-player-container');
+            if (overlay && container) {
+                overlay.classList.add('hidden');
+                container.classList.remove('hidden');
+                container.innerHTML = `<iframe src="https://player.vimeo.com/video/1207604094?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Welcome to Newlands Research Masterclass"></iframe>`;
+            }
+        }
     </script>
     
     <style>
@@ -133,6 +144,20 @@
                             <i class="fa-solid fa-graduation-cap"></i>
                             A 12-Week Online Training Programme
                         </div>
+
+                        <!-- Live Class Zoom Quick Link Notice -->
+                        <div class="p-3 bg-red-50 border border-clinical-200 rounded-md flex flex-col sm:flex-row items-center justify-between gap-3 text-left max-w-2xl mx-auto lg:mx-0">
+                            <div class="flex items-center gap-2.5">
+                                <span class="flex h-2.5 w-2.5 relative">
+                                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-clinical-400 opacity-75"></span>
+                                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-clinical-600"></span>
+                                </span>
+                                <span class="text-xs font-semibold text-slate-700">Live 12-Week Session Zoom Link</span>
+                            </div>
+                            <a href="https://us06web.zoom.us/j/86797857161?pwd=woNfLtiNba8xL0Deg57l7IbPcyCqbj.1" target="_blank" class="bg-clinical-600 hover:bg-clinical-700 text-white text-[10px] uppercase tracking-wider font-bold px-3.5 py-1.5 rounded transition inline-flex items-center gap-1 shadow-sm">
+                                <i class="fa-solid fa-video"></i> Login to Zoom
+                            </a>
+                        </div>
                         
                         <h1 class="font-serif font-extrabold text-4xl sm:text-5xl lg:text-6xl text-navy-900 leading-[1.1] tracking-tight">
                             Research Masterclass <br>
@@ -147,6 +172,9 @@
                             <button onclick="switchView('mentors')" class="bg-clinical-600 hover:bg-clinical-700 text-white px-8 py-3.5 rounded font-bold text-xs uppercase tracking-wider shadow-md text-center transition duration-300">
                                 Meet Instructors & Mentors
                             </button>
+                            <a href="https://us06web.zoom.us/j/86797857161?pwd=woNfLtiNba8xL0Deg57l7IbPcyCqbj.1" target="_blank" class="border border-slate-300 hover:border-slate-400 bg-white text-slate-700 px-8 py-3.5 rounded font-bold text-xs uppercase tracking-wider shadow-sm text-center transition duration-300 inline-flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-video text-clinical-600"></i> Join Live Classroom
+                            </a>
                         </div>
 
                         <!-- Counters Matrix (Updated to 2 Core Modules) -->
@@ -224,7 +252,35 @@
                             The Research Department plays a major role in improving complex HIV therapy across southern Africa. By conducting independent research and participating in international scientific studies, our team focuses on enhancing daily patient management.
                         </p>
                     </div>
-                    <div class="lg:col-span-5">
+                    <div class="lg:col-span-5 space-y-6">
+                        <!-- Vimeo Video Embed Card with Custom Thumbnail Overlay -->
+                        <div class="bg-white rounded border border-slate-200 shadow-clinical-soft overflow-hidden">
+                            <div class="p-4 border-b border-slate-200 flex items-center gap-2 text-clinical-600">
+                                <i class="fa-solid fa-circle-play text-lg"></i>
+                                <span class="font-serif font-bold text-base text-navy-900">Introductory Course Video</span>
+                            </div>
+                            <!-- Responsive Video Embed Wrapper -->
+                            <div class="relative w-full aspect-video bg-black" id="video-wrapper">
+                                <!-- Custom Thumbnail Overlay and Play Action -->
+                                <div id="video-overlay" class="absolute inset-0 z-10 cursor-pointer flex items-center justify-center bg-cover bg-center" style="background-image: url('https://raw.githubusercontent.com/researchnewlands/Research/main/Newlands%20Clinic%20Research%20Masterclass.jpg');">
+                                    <!-- Dark Overlay tint for typography / button clarity -->
+                                    <div class="absolute inset-0 bg-black/40 transition hover:bg-black/25"></div>
+                                    <!-- Play Button -->
+                                    <button onclick="playIntroVideo()" class="relative z-20 w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center rounded-full bg-clinical-600 text-white hover:scale-105 transition transform shadow-lg">
+                                        <i class="fa-solid fa-play text-2xl sm:text-3xl ml-1"></i>
+                                    </button>
+                                </div>
+                                <!-- Dynamic Player Destination -->
+                                <div id="vimeo-player-container" class="w-full h-full hidden">
+                                    <!-- Dynamic Vimeo frame will be populated here -->
+                                </div>
+                            </div>
+                            <div class="p-3.5 bg-slate-50 border-t border-slate-100">
+                                <p class="text-[11px] text-slate-500 text-center font-medium">Click to watch the introductory masterclass presentation.</p>
+                            </div>
+                        </div>
+
+                        <!-- Research Focus Areas Section -->
                         <div class="bg-slate-50 p-8 rounded border border-slate-200 shadow-clinical-soft">
                             <div class="flex items-center space-x-2 text-clinical-600 mb-6">
                                 <i class="fa-solid fa-microscope text-2xl"></i>
