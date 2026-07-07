@@ -54,7 +54,6 @@
                 }
             }
         }
-
         // Simple Single Page App View Router
         function switchView(viewId) {
             const homeView = document.getElementById('home-view');
@@ -70,7 +69,6 @@
                 window.scrollTo(0, 0);
             }
         }
-
         // Play Intro Video & Swap Custom Thumbnail
         function playIntroVideo() {
             const overlay = document.getElementById('video-overlay');
@@ -100,7 +98,6 @@
     </style>
 </head>
 <body class="bg-white text-slate-800 font-sans antialiased overflow-x-hidden m-0 p-0 box-border">
-
     <!-- Sticky Institutional Navigation Header -->
     <header class="sticky top-0 z-50 backdrop-blur-md bg-white/95 border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -116,9 +113,9 @@
                     <button onclick="switchView('home')" class="text-xs uppercase tracking-wider font-semibold text-slate-600 hover:text-clinical-600 transition">Home</button>
                     <a href="#about-us" onclick="switchView('home')" class="text-xs uppercase tracking-wider font-semibold text-slate-600 hover:text-clinical-600 transition">About Us</a>
                     <a href="#curriculum" onclick="switchView('home')" class="text-xs uppercase tracking-wider font-semibold text-slate-600 hover:text-clinical-600 transition">Syllabus</a>
+                    <a href="#" class="text-xs uppercase tracking-wider font-semibold text-slate-600 hover:text-clinical-600 transition">Course Material</a>
                     <button onclick="switchView('mentors')" class="text-xs uppercase tracking-wider font-semibold text-slate-600 hover:text-clinical-600 transition">Instructors & Mentors</button>
                 </nav>
-
                 <!-- Action Button -->
                 <div class="flex items-center space-x-4">
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKfdYu5QoGLaVBjnap2C-2eWHKIxW41gjcARHZ33Of7cQe7Q/viewform?usp=dialog" target="_blank" class="bg-clinical-600 hover:bg-clinical-700 text-white px-5 py-2.5 rounded text-xs uppercase tracking-wider font-bold shadow-sm transition">
@@ -128,14 +125,12 @@
             </div>
         </div>
     </header>
-
     <!-- MAIN HOME VIEW CONTAINER -->
     <div id="home-view">
         <!-- Hero / Institutional Intro Section -->
         <section class="relative flex items-center py-16 lg:py-24 overflow-hidden bg-slate-50 border-b border-slate-200 bg-grid-pattern">
             <div class="absolute top-1/4 right-0 w-[450px] h-[450px] bg-rose-50/60 rounded-full blur-3xl pointer-events-none"></div>
             <div class="absolute bottom-12 left-0 w-96 h-96 bg-navy-50/55 rounded-full blur-2xl pointer-events-none"></div>
-
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                     
@@ -144,7 +139,6 @@
                             <i class="fa-solid fa-graduation-cap"></i>
                             A 12-Week Online Training Programme
                         </div>
-
                         <!-- Live Class Zoom Quick Link Notice -->
                         <div class="p-3 bg-red-50 border border-clinical-200 rounded-md flex flex-col sm:flex-row items-center justify-between gap-3 text-left max-w-2xl mx-auto lg:mx-0">
                             <div class="flex items-center gap-2.5">
@@ -163,11 +157,9 @@
                             Research Masterclass <br>
                             <span class="text-clinical-600 font-normal italic">for Clinicians</span>
                         </h1>
-
                         <p class="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
                             Foundations in Epidemiology, Statistics, and Scientific Writing. Empowering clinical observers to confidently transition into lead researchers with sound analytical pipelines.
                         </p>
-
                         <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
                             <button onclick="switchView('mentors')" class="bg-clinical-600 hover:bg-clinical-700 text-white px-8 py-3.5 rounded font-bold text-xs uppercase tracking-wider shadow-md text-center transition duration-300">
                                 Meet Instructors & Mentors
@@ -176,7 +168,6 @@
                                 <i class="fa-solid fa-video text-clinical-600"></i> Join Live Classroom
                             </a>
                         </div>
-
                         <!-- Counters Matrix (Updated to 2 Core Modules) -->
                         <div class="grid grid-cols-3 gap-6 pt-8 border-t border-slate-200 max-w-md mx-auto lg:mx-0">
                             <div>
@@ -193,7 +184,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="lg:col-span-5 relative">
                         <div class="relative bg-white border border-slate-200 rounded p-6 sm:p-8 shadow-clinical-soft">
                             <div class="absolute top-0 left-0 right-0 h-1 bg-clinical-600 rounded-t"></div>
@@ -201,7 +191,6 @@
                                 <span class="text-[10px] font-extrabold text-navy-600 uppercase tracking-wider">Course Competency Index</span>
                                 <span class="px-2.5 py-1 bg-green-50 text-green-700 text-[10px] font-extrabold rounded border border-green-200 uppercase">Registration Open</span>
                             </div>
-
                             <div class="space-y-5">
                                 <div class="space-y-1.5">
                                     <div class="flex justify-between text-xs font-semibold">
@@ -222,7 +211,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="mt-8 p-4 bg-slate-50 border border-slate-200 rounded relative overflow-hidden">
                                 <span class="text-[10px] uppercase font-extrabold text-navy-800 tracking-wider">Statement of Final Impact</span>
                                 <p class="text-xs text-slate-600 italic mt-2 leading-relaxed">
@@ -234,7 +222,6 @@
                 </div>
             </div>
         </section>
-
         <!-- About Newlands Clinic Section -->
         <section id="about-us" class="py-20 bg-white relative">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -279,7 +266,6 @@
                                 <p class="text-[11px] text-slate-500 text-center font-medium">Click to watch the introductory masterclass presentation.</p>
                             </div>
                         </div>
-
                         <!-- Research Focus Areas Section -->
                         <div class="bg-slate-50 p-8 rounded border border-slate-200 shadow-clinical-soft">
                             <div class="flex items-center space-x-2 text-clinical-600 mb-6">
@@ -301,7 +287,6 @@
                 </div>
             </div>
         </section>
-
         <!-- Course Syllabus Preview Section -->
         <section id="curriculum" class="py-20 bg-navy-900 text-white relative bg-dark-grid-pattern">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -309,7 +294,6 @@
                     <span class="text-xs uppercase font-extrabold text-clinical-500 tracking-widest block mb-2">Curriculum Roadmap</span>
                     <h2 class="font-serif font-extrabold text-3xl sm:text-4xl text-white"> Pillars of Research </h2>
                 </div>
-
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
                     <!-- MODULE 1 -->
                     <div class="bg-navy-800/80 border border-navy-700 rounded p-8">
@@ -326,7 +310,6 @@
                 </div>
             </div>
         </section>
-
         <!-- Dynamic Action Intermission Panel -->
         <section class="py-16 bg-white relative text-center">
             <div class="max-w-4xl mx-auto px-4">
@@ -338,8 +321,6 @@
             </div>
         </section>
     </div>
-
-
     <!-- DEDICATED INSTRUCTORS & MENTORS PAGE VIEW -->
     <div id="mentors-view" class="hidden bg-slate-50 bg-grid-pattern py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -350,7 +331,6 @@
                     <i class="fa-solid fa-arrow-left"></i> Back to Main Page
                 </button>
             </div>
-
             <!-- Page Title Block -->
             <div class="border-b border-slate-200 pb-8 mb-12">
                 <span class="text-xs uppercase font-extrabold text-clinical-600 tracking-widest block mb-2">Academic Faculty</span>
@@ -374,7 +354,6 @@
                         <p class="text-slate-500 text-xs font-semibold pt-1">PhD Epidemiologist / Data Analyst & Generative AI Researcher</p>
                     </div>
                 </div>
-
                 <!-- Varaidzo Moyo -->
                 <div class="bg-white border border-slate-200 rounded p-6 flex flex-col sm:flex-row gap-6 items-center sm:items-start shadow-sm">
                     <div class="w-24 h-24 rounded flex-shrink-0 border border-slate-200 overflow-hidden bg-slate-100">
@@ -386,7 +365,6 @@
                         <p class="text-slate-500 text-xs font-semibold pt-1">MSc Public Health / Data Analyst</p>
                     </div>
                 </div>
-
                 <!-- Dr. Cleophas Chimbetete -->
                 <div class="bg-white border border-slate-200 rounded p-6 flex flex-col sm:flex-row gap-6 items-center sm:items-start shadow-sm">
                     <div class="w-24 h-24 rounded flex-shrink-0 border border-slate-200 overflow-hidden bg-slate-100">
@@ -398,7 +376,6 @@
                         <p class="text-slate-500 text-xs font-semibold pt-1">Director Research & Training <br><span class="font-mono font-semibold">MBCHB, MPH, PhD</span></p>
                     </div>
                 </div>
-
                 <!-- Dr. Tinei Shamu -->
                 <div class="bg-white border border-slate-200 rounded p-6 flex flex-col sm:flex-row gap-6 items-center sm:items-start shadow-sm">
                     <div class="w-24 h-24 rounded flex-shrink-0 border border-slate-200 overflow-hidden bg-slate-100">
@@ -410,7 +387,6 @@
                         <p class="text-slate-500 text-xs font-semibold pt-1">PhD Epidemiologist</p>
                     </div>
                 </div>
-
                 <!-- Tinashe Mudzviti -->
                 <div class="bg-white border border-slate-200 rounded p-6 flex flex-col sm:flex-row gap-6 items-center sm:items-start shadow-sm">
                     <div class="w-24 h-24 rounded flex-shrink-0 border border-slate-200 overflow-hidden bg-slate-100">
@@ -422,7 +398,6 @@
                         <p class="text-slate-500 text-xs font-semibold pt-1">PhD Candidate</p>
                     </div>
                 </div>
-
                 <!-- Buntubethu Sydney Malunga -->
                 <div class="bg-white border border-slate-200 rounded p-6 flex flex-col sm:flex-row gap-6 items-center sm:items-start shadow-sm">
                     <div class="w-24 h-24 rounded flex-shrink-0 border border-slate-200 overflow-hidden bg-slate-100">
@@ -434,12 +409,9 @@
                         <p class="text-slate-500 text-xs font-semibold pt-1">Data Analyst</p>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
-
-
     <!-- Footer -->
     <footer class="bg-navy-950 text-slate-400 text-xs py-8 border-t border-navy-900 clear-both">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-2">
@@ -447,6 +419,5 @@
             <p class="text-slate-600">Harare, Zimbabwe.</p>
         </div>
     </footer>
-
 </body>
 </html>
