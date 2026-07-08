@@ -99,31 +99,27 @@
 </head>
 <body class="bg-white text-slate-800 font-sans antialiased overflow-x-hidden m-0 p-0 box-border">
     <!-- Sticky Institutional Navigation Header -->
-   <header class="sticky top-0 z-50 backdrop-blur-md bg-white/95 border-b border-slate-200">
+   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-20">
             
-            <div class="flex items-center cursor-pointer" onclick="switchView('home')">
-                <img src="nc-logo.png" alt="Newlands Clinic Logo" class="h-14 sm:h-16 w-auto object-contain">
+            <div class="cursor-pointer" onclick="switchView('home')">
+                <img src="nc-logo.png" alt="Newlands Clinic Logo" class="h-12 w-auto">
             </div>
 
-            <button id="menu-btn" class="lg:hidden p-2 text-slate-800">
+            <button id="menu-btn" class="lg:hidden text-slate-800 focus:outline-none p-2">
                 <i class="fa-solid fa-bars text-2xl"></i>
             </button>
             
-            <nav id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-white border-b border-slate-200 p-6 flex-col gap-4 z-40 lg:flex lg:static lg:flex-row lg:w-auto lg:p-0 lg:border-none lg:bg-transparent lg:shadow-none shadow-lg">
-                <button onclick="switchView('home'); toggleMenu();" class="text-xs uppercase tracking-wider font-semibold text-slate-600 hover:text-clinical-600 transition text-left">Home</button>
-                <a href="#about-us" onclick="toggleMenu()" class="text-xs uppercase tracking-wider font-semibold text-slate-600 hover:text-clinical-600 transition">About Us</a>
-                <a href="#curriculum" onclick="toggleMenu()" class="text-xs uppercase tracking-wider font-semibold text-slate-600 hover:text-clinical-600 transition">Syllabus</a>
-                <a href="course-material-hub.html" class="text-xs uppercase tracking-wider font-semibold text-slate-600 hover:text-clinical-600 transition">Course Material</a>
-                
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKfdYu5QoGLaVBjnap2C-2eWHKIxW41gjcARHZ33Of7cQe7Q/viewform?usp=dialog" target="_blank" class="lg:hidden bg-clinical-600 text-white px-5 py-2.5 rounded text-xs uppercase tracking-wider font-bold shadow-sm transition inline-block text-center">
-                    Express Interest
-                </a>
+            <nav id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-white border-b border-slate-200 p-6 flex-col gap-4 z-40 lg:flex lg:static lg:flex-row lg:w-auto lg:p-0 lg:border-none shadow-lg lg:shadow-none">
+                <button onclick="switchView('home'); toggleMenu();" class="text-xs uppercase tracking-wider font-semibold text-slate-600 hover:text-clinical-600 text-left">Home</button>
+                <a href="#about-us" onclick="toggleMenu()" class="text-xs uppercase tracking-wider font-semibold text-slate-600 hover:text-clinical-600">About Us</a>
+                <a href="#curriculum" onclick="toggleMenu()" class="text-xs uppercase tracking-wider font-semibold text-slate-600 hover:text-clinical-600">Syllabus</a>
+                <a href="course-material-hub.html" class="text-xs uppercase tracking-wider font-semibold text-slate-600 hover:text-clinical-600">Course Material</a>
             </nav>
 
-            <div class="hidden lg:flex items-center space-x-4">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKfdYu5QoGLaVBjnap2C-2eWHKIxW41gjcARHZ33Of7cQe7Q/viewform?usp=dialog" target="_blank" class="bg-clinical-600 hover:bg-clinical-700 text-white px-5 py-2.5 rounded text-xs uppercase tracking-wider font-bold shadow-sm transition">
+            <div class="hidden lg:block">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKfdYu5QoGLaVBjnap2C-2eWHKIxW41gjcARHZ33Of7cQe7Q/viewform?usp=dialog" target="_blank" class="bg-clinical-600 text-white px-5 py-2.5 rounded text-xs uppercase font-bold shadow-sm hover:bg-red-800 transition">
                     Express Interest
                 </a>
             </div>
