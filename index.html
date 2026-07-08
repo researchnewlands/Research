@@ -100,31 +100,36 @@
 <body class="bg-white text-slate-800 font-sans antialiased overflow-x-hidden m-0 p-0 box-border">
     <!-- Sticky Institutional Navigation Header -->
     <header class="sticky top-0 z-50 backdrop-blur-md bg-white/95 border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+            
+            <div class="flex items-center cursor-pointer" onclick="switchView('home')">
+                <img src="nc-logo.png" alt="Newlands Clinic Logo" class="h-14 sm:h-16 w-auto object-contain">
+            </div>
+
+            <button id="menu-btn" class="lg:hidden text-slate-800 focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+            
+            <nav id="mobile-menu" class="hidden lg:flex lg:items-center lg:space-x-8 absolute lg:static top-20 left-0 w-full bg-white border-b lg:border-none p-6 lg:p-0 flex-col lg:flex-row space-y-4 lg:space-y-0 z-40 shadow-lg lg:shadow-none">
+                <button onclick="switchView('home'); toggleMenu();" class="text-xs uppercase tracking-wider font-semibold text-slate-600 hover:text-clinical-600 transition">Home</button>
+                <a href="#about-us" onclick="toggleMenu()" class="text-xs uppercase tracking-wider font-semibold text-slate-600 hover:text-clinical-600 transition">About Us</a>
+                <a href="#curriculum" onclick="toggleMenu()" class="text-xs uppercase tracking-wider font-semibold text-slate-600 hover:text-clinical-600 transition">Syllabus</a>
+                <a href="course-material-hub.html" class="text-xs uppercase tracking-wider font-semibold text-slate-600 hover:text-clinical-600 transition">Course Material</a>
                 
-                <!-- Logo Block -->
-                <div class="flex items-center cursor-pointer" onclick="switchView('home')">
-                    <img src="nc-logo.png" alt="Newlands Clinic Logo" class="h-14 sm:h-16 w-auto object-contain">
-                </div>
-                
-                <!-- Desktop Navigation Links -->
-              <nav class="hidden lg:flex items-center space-x-8">
-    <button onclick="switchView('home')" class="text-xs uppercase tracking-wider font-semibold text-slate-600 hover:text-clinical-600 transition">Home</button>
-    <a href="#about-us" onclick="switchView('home')" class="text-xs uppercase tracking-wider font-semibold text-slate-600 hover:text-clinical-600 transition">About Us</a>
-    <a href="#curriculum" onclick="switchView('home')" class="text-xs uppercase tracking-wider font-semibold text-slate-600 hover:text-clinical-600 transition">Syllabus</a>
-    
-    <a href="course-material-hub.html" class="text-xs uppercase tracking-wider font-semibold text-slate-600 hover:text-clinical-600 transition">Course Material</a>
-</nav>
-                <!-- Action Button -->
-                <div class="flex items-center space-x-4">
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKfdYu5QoGLaVBjnap2C-2eWHKIxW41gjcARHZ33Of7cQe7Q/viewform?usp=dialog" target="_blank" class="bg-clinical-600 hover:bg-clinical-700 text-white px-5 py-2.5 rounded text-xs uppercase tracking-wider font-bold shadow-sm transition">
-                        Express Interest
-                    </a>
-                </div>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKfdYu5QoGLaVBjnap2C-2eWHKIxW41gjcARHZ33Of7cQe7Q/viewform?usp=dialog" target="_blank" class="lg:hidden bg-clinical-600 text-white px-5 py-2.5 rounded text-xs uppercase tracking-wider font-bold shadow-sm transition inline-block">
+                    Express Interest
+                </a>
+            </nav>
+
+            <div class="hidden lg:flex items-center space-x-4">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKfdYu5QoGLaVBjnap2C-2eWHKIxW41gjcARHZ33Of7cQe7Q/viewform?usp=dialog" target="_blank" class="bg-clinical-600 hover:bg-clinical-700 text-white px-5 py-2.5 rounded text-xs uppercase tracking-wider font-bold shadow-sm transition">
+                    Express Interest
+                </a>
             </div>
         </div>
-    </header>
+    </div>
+</header>
     <!-- MAIN HOME VIEW CONTAINER -->
     <div id="home-view">
         <!-- Hero / Institutional Intro Section -->
