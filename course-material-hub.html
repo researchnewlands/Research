@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Material | Research Masterclass</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { clinical: { 600: '#d32f2f' } } } }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans">
+
+  <nav class="bg-white p-6 shadow-sm flex items-center justify-between">
+    <a href="index.html" class="flex items-center space-x-3">
+        <img src="nc-logo.png" alt="Newlands Clinic Logo" class="h-16 w-auto">
+    </a>
+
+    <div class="hidden lg:flex items-center space-x-8">
+        <a href="index.html" class="text-sm uppercase tracking-wider font-semibold text-slate-600 hover:text-clinical-600 transition">Home</a>
+        <a href="course-material-hub.html" class="text-sm uppercase tracking-wider font-semibold text-clinical-600 transition">Course Material</a>
+    </div>
+</nav>
+
+    <main class="max-w-4xl mx-auto py-12 px-6">
+
+        <h1 class="text-3xl font-bold mb-8 text-slate-900">Course Curriculum</h1>
+
+        <!-- ==================== MATERIALS SECTION ==================== -->
+        <h2 class="text-2xl font-bold mb-6 text-slate-900 border-b-2 border-clinical-600 pb-2">Materials</h2>
+        <div class="bg-slate-100 p-8 rounded-xl border border-slate-200 mb-12">
+            <h3 class="text-lg font-bold mb-4 text-slate-800">Supplemental Resources</h3>
+            <button onclick="checkPasskey('A-Dictionary-of-Epidemiology-Oxford-University-Press-2014.pdf')" class="w-full md:w-auto px-6 py-3 bg-white border border-slate-300 rounded shadow-sm hover:border-clinical-600 transition font-medium text-slate-700">
+                📖 A Dictionary of Epidemiology (2014)
+            </button>
+        </div>
+
+        <!-- ==================== MODULE 1 ==================== -->
+        <h2 class="text-2xl font-bold mb-6 text-slate-900 border-b-2 border-clinical-600 pb-2">Module 1: Mastery of Research Design and Epidemiology</h2>
+
+        <div class="space-y-4 mb-12">
+
+            <!-- WEEK 1 -->
+            <div class="bg-white border border-slate-200 rounded-lg shadow-sm overflow-hidden">
+                <button onclick="toggleWeek('week1')" class="w-full flex items-center justify-between p-5 text-left hover:bg-slate-50 transition">
+                    <div>
+                        <span class="text-[11px] font-extrabold uppercase text-clinical-600 tracking-wider">Week 1 &nbsp;•&nbsp; 8 July 2026</span>
+                        <h3 class="font-bold text-lg text-slate-900 mt-1">Fundamentals of Epidemiology</h3>
+                    </div>
+                    <span id="week1-icon" class="text-slate-400 text-xl transition-transform duration-200">▾</span>
+                </button>
+                <div id="week1-content" class="hidden border-t border-slate-200 p-5 space-y-3 bg-slate-50">
+                    <button onclick="checkPasskey('topic-1-notes.html')" class="w-full text-left p-4 bg-white border border-slate-200 rounded hover:border-clinical-600 transition font-semibold flex items-center gap-2">
+                        🔒 Reading Notes | Introduction to Fundamentals of Epidemiology
+                    </button>
+                    <a href="https://github.com/researchnewlands/Research/blob/main/Topic1-Introduction-to-Fundamentals-of-Epidemiology.pdf" target="_blank" class="block p-4 bg-white border border-slate-200 rounded hover:border-clinical-600 transition font-semibold">
+                        📑 Lecture Slides | Fundamentals of Epidemiology
+                    </a>
+                    <a href="https://newlandsclinic-my.sharepoint.com/:v:/g/personal/research_newlandsclinic_org_zw/IQDfsXG3NZBdSKn7x1jihDZiAYHmIKPhnQ4E_iW6_2Erxi8?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=6SvDAi" target="_blank" class="block p-4 bg-white border border-slate-200 rounded hover:border-clinical-600 transition font-semibold">
+                        🎥 Live Session | Zoom Recording | Fundamentals of Epidemiology
+                    </a>
+                    <button onclick="checkPasskey('grading-quiz.html')" class="w-full text-left p-4 bg-red-50 border-2 border-clinical-600 rounded hover:bg-white transition font-bold text-clinical-700">
+                        🔒 Topic 1 Quiz
+                        <span class="block text-xs font-semibold text-slate-500 mt-1">Due Sunday 12 July 2026, 11:59pm</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- WEEK 2 -->
+            <div class="bg-white border border-slate-200 rounded-lg shadow-sm overflow-hidden">
+                <button onclick="toggleWeek('week2')" class="w-full flex items-center justify-between p-5 text-left hover:bg-slate-50 transition">
+                    <div>
+                        <span class="text-[11px] font-extrabold uppercase text-clinical-600 tracking-wider">Week 2 &nbsp;•&nbsp; 15 July 2026</span>
+                        <h3 class="font-bold text-lg text-slate-900 mt-1">The Epidemiological Focus</h3>
+                    </div>
+                    <span id="week2-icon" class="text-slate-400 text-xl transition-transform duration-200">▾</span>
+                </button>
+                <div id="week2-content" class="hidden border-t border-slate-200 p-5 space-y-3 bg-slate-50">
+                    <button onclick="checkPasskey('topic-2-notes.html')" class="w-full text-left p-4 bg-white border border-slate-200 rounded hover:border-clinical-600 transition font-semibold flex items-center gap-2">
+                        🔒 Reading Notes | The Epidemiological Focus
+                    </button>
+                    <div class="p-4 bg-white border border-dashed border-slate-300 rounded text-slate-400 font-semibold">
+                        📑 Lecture Slides | The Epidemiological Focus <span class="text-xs font-normal">(link coming soon)</span>
+                    </div>
+                    <div class="p-4 bg-white border border-dashed border-slate-300 rounded text-slate-400 font-semibold">
+                        🎥 Live Session | Zoom Recording <span class="text-xs font-normal">(link coming soon)</span>
+                    </div>
+                    <button onclick="checkPasskey('grading-quiz.html')" class="w-full text-left p-4 bg-red-50 border-2 border-clinical-600 rounded hover:bg-white transition font-bold text-clinical-700">
+                        🔒 Topic 2 Quiz
+                        <span class="block text-xs font-semibold text-slate-500 mt-1">Due Sunday 19 July 2026, 11:59pm</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- WEEK 3 -->
+            <div class="bg-white border border-slate-200 rounded-lg shadow-sm overflow-hidden">
+                <button onclick="toggleWeek('week3')" class="w-full flex items-center justify-between p-5 text-left hover:bg-slate-50 transition">
+                    <div>
+                        <span class="text-[11px] font-extrabold uppercase text-clinical-600 tracking-wider">Week 3 &nbsp;•&nbsp; 22 July 2026</span>
+                        <h3 class="font-bold text-lg text-slate-900 mt-1">Measures of Disease Occurrence</h3>
+                    </div>
+                    <span id="week3-icon" class="text-slate-400 text-xl transition-transform duration-200">▾</span>
+                </button>
+                <div id="week3-content" class="hidden border-t border-slate-200 p-5 space-y-3 bg-slate-50">
+                    <button onclick="checkPasskey('topic-3-notes.html')" class="w-full text-left p-4 bg-white border border-slate-200 rounded hover:border-clinical-600 transition font-semibold flex items-center gap-2">
+                        🔒 Reading Notes | Measures of Disease Occurrence
+                    </button>
+                    <div class="p-4 bg-white border border-dashed border-slate-300 rounded text-slate-400 font-semibold">
+                        📑 Lecture Slides | Measures of Disease Occurrence <span class="text-xs font-normal">(link coming soon)</span>
+                    </div>
+                    <div class="p-4 bg-white border border-dashed border-slate-300 rounded text-slate-400 font-semibold">
+                        🎥 Live Session | Zoom Recording <span class="text-xs font-normal">(link coming soon)</span>
+                    </div>
+                    <button onclick="checkPasskey('grading-quiz.html')" class="w-full text-left p-4 bg-red-50 border-2 border-clinical-600 rounded hover:bg-white transition font-bold text-clinical-700">
+                        🔒 Topic 3 Quiz
+                        <span class="block text-xs font-semibold text-slate-500 mt-1">Due Sunday 26 July 2026, 11:59pm</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- WEEK 4 -->
+            <div class="bg-white border border-slate-200 rounded-lg shadow-sm overflow-hidden">
+                <button onclick="toggleWeek('week4')" class="w-full flex items-center justify-between p-5 text-left hover:bg-slate-50 transition">
+                    <div>
+                        <span class="text-[11px] font-extrabold uppercase text-clinical-600 tracking-wider">Week 4 &nbsp;•&nbsp; 29 July 2026</span>
+                        <h3 class="font-bold text-lg text-slate-900 mt-1">Using Routine Health Data for Research</h3>
+                    </div>
+                    <span id="week4-icon" class="text-slate-400 text-xl transition-transform duration-200">▾</span>
+                </button>
+                <div id="week4-content" class="hidden border-t border-slate-200 p-5 space-y-3 bg-slate-50">
+                    <button onclick="checkPasskey('topic-4-notes.html')" class="w-full text-left p-4 bg-white border border-slate-200 rounded hover:border-clinical-600 transition font-semibold flex items-center gap-2">
+                        🔒 Reading Notes | Using Routine Health Data for Research
+                    </button>
+                    <div class="p-4 bg-white border border-dashed border-slate-300 rounded text-slate-400 font-semibold">
+                        📑 Lecture Slides | Using Routine Health Data for Research <span class="text-xs font-normal">(link coming soon)</span>
+                    </div>
+                    <div class="p-4 bg-white border border-dashed border-slate-300 rounded text-slate-400 font-semibold">
+                        🎥 Live Session | Zoom Recording <span class="text-xs font-normal">(link coming soon)</span>
+                    </div>
+                    <button onclick="checkPasskey('grading-quiz.html')" class="w-full text-left p-4 bg-red-50 border-2 border-clinical-600 rounded hover:bg-white transition font-bold text-clinical-700">
+                        🔒 Topic 4 Quiz
+                        <span class="block text-xs font-semibold text-slate-500 mt-1">Due Sunday 2 August 2026, 11:59pm</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- WEEK 5 -->
+            <div class="bg-white border border-slate-200 rounded-lg shadow-sm overflow-hidden">
+                <button onclick="toggleWeek('week5')" class="w-full flex items-center justify-between p-5 text-left hover:bg-slate-50 transition">
+                    <div>
+                        <span class="text-[11px] font-extrabold uppercase text-clinical-600 tracking-wider">Week 5 &nbsp;•&nbsp; 5 August 2026</span>
+                        <h3 class="font-bold text-lg text-slate-900 mt-1">Measures of Effect and Impact</h3>
+                    </div>
+                    <span id="week5-icon" class="text-slate-400 text-xl transition-transform duration-200">▾</span>
+                </button>
+                <div id="week5-content" class="hidden border-t border-slate-200 p-5 space-y-3 bg-slate-50">
+                    <button onclick="checkPasskey('topic-5-notes.html')" class="w-full text-left p-4 bg-white border border-slate-200 rounded hover:border-clinical-600 transition font-semibold flex items-center gap-2">
+                        🔒 Reading Notes | Measures of Effect and Impact
+                    </button>
+                    <div class="p-4 bg-white border border-dashed border-slate-300 rounded text-slate-400 font-semibold">
+                        📑 Lecture Slides | Measures of Effect and Impact <span class="text-xs font-normal">(link coming soon)</span>
+                    </div>
+                    <div class="p-4 bg-white border border-dashed border-slate-300 rounded text-slate-400 font-semibold">
+                        🎥 Live Session | Zoom Recording <span class="text-xs font-normal">(link coming soon)</span>
+                    </div>
+                    <button onclick="checkPasskey('grading-quiz.html')" class="w-full text-left p-4 bg-red-50 border-2 border-clinical-600 rounded hover:bg-white transition font-bold text-clinical-700">
+                        🔒 Topic 5 Quiz
+                        <span class="block text-xs font-semibold text-slate-500 mt-1">Due Sunday 9 August 2026, 11:59pm</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- WEEK 6 -->
+            <div class="bg-white border border-slate-200 rounded-lg shadow-sm overflow-hidden">
+                <button onclick="toggleWeek('week6')" class="w-full flex items-center justify-between p-5 text-left hover:bg-slate-50 transition">
+                    <div>
+                        <span class="text-[11px] font-extrabold uppercase text-clinical-600 tracking-wider">Week 6 &nbsp;•&nbsp; 12 August 2026</span>
+                        <h3 class="font-bold text-lg text-slate-900 mt-1">Overview of Study Designs</h3>
+                    </div>
+                    <span id="week6-icon" class="text-slate-400 text-xl transition-transform duration-200">▾</span>
+                </button>
+                <div id="week6-content" class="hidden border-t border-slate-200 p-5 space-y-3 bg-slate-50">
+                    <button onclick="checkPasskey('topic-6-notes.html')" class="w-full text-left p-4 bg-white border border-slate-200 rounded hover:border-clinical-600 transition font-semibold flex items-center gap-2">
+                        🔒 Reading Notes | Overview of Study Designs
+                    </button>
+                    <div class="p-4 bg-white border border-dashed border-slate-300 rounded text-slate-400 font-semibold">
+                        📑 Lecture Slides | Overview of Study Designs <span class="text-xs font-normal">(link coming soon)</span>
+                    </div>
+                    <div class="p-4 bg-white border border-dashed border-slate-300 rounded text-slate-400 font-semibold">
+                        🎥 Live Session | Zoom Recording <span class="text-xs font-normal">(link coming soon)</span>
+                    </div>
+                    <button onclick="checkPasskey('grading-quiz.html')" class="w-full text-left p-4 bg-red-50 border-2 border-clinical-600 rounded hover:bg-white transition font-bold text-clinical-700">
+                        🔒 Topic 6 Quiz
+                        <span class="block text-xs font-semibold text-slate-500 mt-1">Due Sunday 16 August 2026, 11:59pm</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ==================== MODULE 2 ==================== -->
+        <h2 class="text-2xl font-bold mb-6 text-slate-900 border-b-2 border-clinical-600 pb-2">Module 2: Applied Statistical Literacy</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            <p class="text-slate-500 italic">Coming soon...</p>
+        </div>
+
+    </main>
+
+    <script>
+        const PASSKEY = "Research2026"; 
+
+        function checkPasskey(targetPage) {
+            const userInput = prompt("Please enter the passkey to access this material:");
+            
+            if (userInput === PASSKEY) {
+                window.location.href = targetPage;
+            } else if (userInput !== null) {
+                alert("Incorrect passkey. Access denied.");
+            }
+        }
+
+        // Accordion toggle for weekly dropdowns
+        function toggleWeek(weekId) {
+            const content = document.getElementById(weekId + '-content');
+            const icon = document.getElementById(weekId + '-icon');
+            const isOpen = !content.classList.contains('hidden');
+
+            if (isOpen) {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+    </script>
+</body>
+</html>
