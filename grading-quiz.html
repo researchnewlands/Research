@@ -365,6 +365,12 @@
         <button class="module-btn" id="nav-btn-4" onclick="switchTopic(4)">Topic 4: Using Routine Health Data</button>
         <button class="module-btn" id="nav-btn-5" onclick="switchTopic(5)">Topic 5: Effect & Impact</button>
         <button class="module-btn" id="nav-btn-6" onclick="switchTopic(6)">Topic 6: Study Designs</button>
+        <button class="module-btn" id="nav-btn-7" onclick="switchTopic(5)">Topic 7: Introduction to Statistics for Epidemiology</button>
+        <button class="module-btn" id="nav-btn-8" onclick="switchTopic(6)">Topic 8: Data Types, Summary ,& Presentation </button>
+        <button class="module-btn" id="nav-btn-9" onclick="switchTopic(5)">Topic 9: Probability Thepry & Statistical Distributions</button>
+        <button class="module-btn" id="nav-btn-10" onclick="switchTopic(6)">Topic 10: Priniciples of Statistical Inference and Hypothesis Testing</button>
+        <button class="module-btn" id="nav-btn-11" onclick="switchTopic(5)">Topic 11: Comparing Means & Proportions </button>
+        <button class="module-btn" id="nav-btn-12" onclick="switchTopic(6)">Topic 12: Measures of Association</button>
     </div>
 
     <!-- ==================== TOPIC 1 CONTAINER ==================== -->
@@ -1022,6 +1028,116 @@
             </div>
         </div>
     </div>
+
+ <!-- ==================== TOPIC 7 CONTAINER ==================== -->
+
+<div id="topic7-view" class="quiz-view">
+        <div class="quiz-card">
+            <div class="topic-timer-box">⏱️ TIME REMAINING: <span id="t7-timer-text">20:00</span></div>
+            <h2>Topic 7: Statistics for Epidemiology</h2>
+            <div class="quiz-container">
+        <form id="quiz-form-topic-7" data-topic="7">
+                <div class="question">
+            <!-- Question 1 -->
+            <div class="question-card" data-question="1">
+                <p><strong>1. Which statistical measure is most appropriate for assessing the strength of association between an exposure and a rare disease in a case-control study?</strong></p>
+                <label><input type="radio" name="entry.2100564425_q1" value="A"> A) Prevalence Ratio</label>
+                <label><input type="radio" name="entry.2100564425_q1" value="B"> B) Relative Risk</label>
+                <label><input type="radio" name="entry.2100564425_q1" value="C"> C) Odds Ratio</label>
+                <label><input type="radio" name="entry.2100564425_q1" value="D"> D) Attributable Risk</label>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question-card" data-question="2">
+                <p><strong>2. In linear regression analysis, what does the coefficient of determination ($R^2$) represent?</strong></p>
+                <label><input type="radio" name="entry.2100564425_q2" value="A"> A) The slope of the regression line</label>
+                <label><input type="radio" name="entry.2100564425_q2" value="B"> B) The proportion of variance in the dependent variable explained by the independent variables</label>
+                <label><input type="radio" name="entry.2100564425_q2" value="C"> C) The statistical significance of the intercept</label>
+                <label><input type="radio" name="entry.2100564425_q2" value="D"> D) The standard error of the estimate</label>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question-card" data-question="3">
+                <p><strong>3. When evaluating survival data with censored observations, which non-parametric method is standard for estimating the survival probability over time?</strong></p>
+                <label><input type="radio" name="entry.2100564425_q3" value="A"> A) Kaplan-Meier estimator</label>
+                <label><input type="radio" name="entry.2100564425_q3" value="B"> B) Student's t-test</label>
+                <label><input type="radio" name="entry.2100564425_q3" value="C"> C) Chi-square test of independence</label>
+                <label><input type="radio" name="entry.2100564425_q3" value="D"> D) Pearson correlation coefficient</label>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question-card" data-question="4">
+                <p><strong>4. Which type of bias occurs when exposure and disease statuses are incorrectly classified, and the misclassification rate is independent of other variables?</strong></p>
+                <label><input type="radio" name="entry.2100564425_q4" value="A"> A) Selection bias</label>
+                <label><input type="radio" name="entry.2100564425_q4" value="B"> B) Confounding</label>
+                <label><input type="radio" name="entry.2100564425_q4" value="C"> C) Differential misclassification</label>
+                <label><input type="radio" name="entry.2100564425_q4" value="D"> D) Non-differential misclassification</label>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question-card" data-question="5">
+                <p><strong>5. In a logistic regression model, the exponentiated regression coefficient ($e^\beta$) yields which of the following epidemiologic measures?</strong></p>
+                <label><input type="radio" name="entry.2100564425_q5" value="A"> A) Absolute risk difference</label>
+                <label><input type="radio" name="entry.2100564425_q5" value="B"> B) Odds ratio</label>
+                <label><input type="radio" name="entry.2100564425_q5" value="C"> C) Hazard ratio</label>
+                <label><input type="radio" name="entry.2100564425_q5" value="D"> D) Incidence rate difference</label>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question-card" data-question="6">
+                <p><strong>6. Which analytical approach is primarily used to control for multiple confounding variables simultaneously while modeling time-to-event data?</strong></p>
+                <label><input type="radio" name="entry.2100564425_q6" value="A"> A) Simple linear regression</label>
+                <label><input type="radio" name="entry.2100564425_q6" value="B"> B) Mann-Whitney U test</label>
+                <label><input type="radio" name="entry.2100564425_q6" value="C"> C) McNemar's test</label>
+                <label><input type="radio" name="entry.2100564425_q6" value="D"> D) Cox proportional hazards regression</label>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="question-card" data-question="7">
+                <p><strong>7. What is the primary advantage of adjusting for confounding through multivariable regression modeling compared to stratification?</strong></p>
+                <label><input type="radio" name="entry.2100564425_q7" value="A"> A) It can simultaneously control for multiple continuous and categorical confounders without sparse data cell problems</label>
+                <label><input type="radio" name="entry.2100564425_q7" value="B"> B) It completely eliminates random error and sampling bias</label>
+                <label><input type="radio" name="entry.2100564425_q7" value="C"> C) It bypasses the need to check for effect modification</label>
+                <label><input type="radio" name="entry.2100564425_q7" value="D"> D) It converts observational data into randomized trial data</label>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="question-card" data-question="8">
+                <p><strong>8. When assessing screening test performance, what does a high negative predictive value (NPV) indicate?</strong></p>
+                <label><input type="radio" name="entry.2100564425_q8" value="A"> A) The proportion of true positives among those who test positive</label>
+                <label><input type="radio" name="entry.2100564425_q8" value="B"> B) The probability that an individual with a negative test result truly does not have the disease</label>
+                <label><input type="radio" name="entry.2100564425_q8" value="C"> C) The overall accuracy of the screening test in the population</label>
+                <label><input type="radio" name="entry.2100564425_q8" value="D"> D) The rate of false negatives due to equipment error</label>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="question-card" data-question="9">
+                <p><strong>9. In epidemiological studies, what phenomenon occurs when a third variable alters the strength or direction of the effect of an exposure on an outcome?</strong></p>
+                <label><input type="radio" name="entry.2100564425_q9" value="A"> A) Effect modification (Interaction)</label>
+                <label><input type="radio" name="entry.2100564425_q9" value="B"> B) Information bias</label>
+                <label><input type="radio" name="entry.2100564425_q9" value="C"> C) Berkson's bias</label>
+                <label><input type="radio" name="entry.2100564425_q9" value="D"> D) Publication bias</label>
+            </div>
+
+            <!-- Question 10 -->
+            <div class="question-card" data-question="10">
+                <p><strong>10. Which study design is most vulnerable to recall bias when collecting exposure data retrospectively?</strong></p>
+                <label><input type="radio" name="entry.2100564425_q10" value="A"> A) Case-control study</label>
+                <label><input type="radio" name="entry.2100564425_q10" value="B"> B) Randomized controlled trial</label>
+                <label><input type="radio" name="entry.2100564425_q10" value="C"> C) Prospective cohort study</label>
+                <label><input type="radio" name="entry.2100564425_q10" value="D"> D) Community intervention trial</label>
+            </div>
+
+            <!-- Hidden Meta-Data Inputs -->
+            <input type="hidden" name="entry.1320488607" id="hidden-student-name">
+            <input type="hidden" name="entry.2082596010" id="hidden-student-email">
+            <input type="hidden" name="entry.1278129340" id="hidden-final-score">
+            
+            <button type="button" class="submit-quiz-btn" onclick="submitQuiz(7)">Submit Assessment</button>
+        </form>
+    </div>
+</div>
+    
 </div>
 
 <!-- ==================== CUSTOM MODAL SYSTEM ==================== -->
@@ -1105,8 +1221,20 @@
                 "t6-q10": "entry.1580530553"
             },
             answerKey: { "t6-q1": "B", "t6-q2": "C", "t6-q3": "B", "t6-q4": "B", "t6-q5": "A", "t6-q6": "B", "t6-q7": "B", "t6-q8": "C", "t6-q9": "A", "t6-q10": "B" }
+        },
+        7: {
+            formId: "YOUR_GOOGLE_FORM_ID_FOR_TOPIC_7",
+            entryIds: { 
+                name: "entry.1320488607", email: "entry.2082596010", score: "entry.1278129340", 
+                "t7-q1": "entry.2100564425", "t7-q2": "entry.1121362798", "t7-q3": "entry.1490126048",
+                "t7-q4": "entry.727829416", "t7-q5": "entry.1690002379", "t7-q6": "entry.1723342081",
+                "t7-q7": "entry.1581389519", "t7-q8": "entry.1938246988", "t7-q9": "entry.783148805",
+                "t7-q10": "entry.454741731"
+            },
+            answerKey: { "t7-q1": "C", "t7-q2": "B", "t7-q3": "A", "t7-q4": "D", "t7-q5": "B", "t7-q6": "D", "t7-q7": "A", "t7-q8": "B", "t7-q9": "A", "t7-q10": "A" }
         }
-    };
+
+```
     
     // Tracking States for Separate Timers
     let studentName = "";
@@ -1119,7 +1247,15 @@
         3: { timeRemaining: 1200, interval: null, completed: false },
         4: { timeRemaining: 1200, interval: null, completed: false },
         5: { timeRemaining: 1200, interval: null, completed: false },
-        6: { timeRemaining: 1200, interval: null, completed: false }
+        6: { timeRemaining: 1200, interval: null, completed: false },
+        7: { timeRemaining: 1200, interval: null, completed: false },
+        8: { timeRemaining: 1200, interval: null, completed: false },
+        9: { timeRemaining: 1200, interval: null, completed: false },
+        10: { timeRemaining: 1200, interval: null, completed: false },
+        11: { timeRemaining: 1200, interval: null, completed: false },
+        12: { timeRemaining: 1200, interval: null, completed: false },
+
+        
     };
     
     // Initialize Tracker State on View Boot
