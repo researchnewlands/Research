@@ -1,0 +1,135 @@
+wave,variable,description,values_or_units,notes
+Baseline (2025),participant_id,Unique participant identifier,"Text, e.g. ZW25-0001",
+Baseline (2025),cluster_id,Survey cluster (enumeration area),1-125,Use for clustering in survey analysis
+Baseline (2025),household_id,Household within cluster,cluster-household,
+Baseline (2025),province,Province of residence,10 Zimbabwe provinces,
+Baseline (2025),residence,Type of place of residence,Urban / Rural,
+Baseline (2025),sample_weight,Normalised sampling weight,Mean = 1,Optional: apply for weighted estimates
+Baseline (2025),interview_date,Date of interview,YYYY-MM-DD,Jul-Dec 2025
+Baseline (2025),date_of_birth,Date of birth,YYYY-MM-DD,
+Baseline (2025),age_years,Age in completed years at interview,15-64,Derived from DOB and interview date
+Baseline (2025),sex,Sex of respondent,Female / Male,
+Baseline (2025),marital_status,Current marital status,Never married / Married/living together / Divorced/separated / Widowed,
+Baseline (2025),education_level,Highest education level attended,No education / Primary / Secondary / Higher,~1% missing
+Baseline (2025),wealth_quintile,Household wealth index quintile,Poorest / Poorer / Middle / Richer / Richest,
+Baseline (2025),currently_employed,Worked in past 12 months,Yes / No,
+Baseline (2025),religion,Religion,Categories,
+Baseline (2025),food_insecurity,Household ran out of food in past 4 weeks,Yes / No,
+Baseline (2025),medical_aid,Has health insurance / medical aid,Yes / No,
+Baseline (2025),distance_to_facility_km,Distance to nearest health facility,km,
+Baseline (2025),hiv_ever_tested,Ever tested for HIV before survey,Yes / No,Self-report
+Baseline (2025),hiv_test_result,Survey HIV test result,Positive / Negative,Biomarker
+Baseline (2025),hiv_status_known,HIV-positive and aware of status,Yes / No / N/A,N/A for HIV-negative
+Baseline (2025),hiv_diagnosis_date,Date first diagnosed HIV-positive,YYYY-MM-DD,Blank if not aware
+Baseline (2025),on_art,Currently on antiretroviral therapy,Yes / No / N/A,
+Baseline (2025),art_start_date,Date ART started,YYYY-MM-DD,Blank if not on ART
+Baseline (2025),years_on_art,Duration on ART,years,
+Baseline (2025),art_regimen,Current ART regimen,e.g. TDF/3TC/DTG,
+Baseline (2025),art_line,ART line,First line / Second line,
+Baseline (2025),who_clinical_stage,Most recent WHO HIV clinical stage,1-4,Only for those aware of status
+Baseline (2025),cd4_count_cells_ul,CD4 count,cells/µL,HIV-positive only
+Baseline (2025),viral_load_copies_ml,HIV-1 viral load,copies/mL,20 = target not detected/<20; HIV-positive only
+Baseline (2025),viral_load_suppressed_lt1000,Viral load suppressed (<1000 copies/mL),Yes / No,
+Baseline (2025),cotrimoxazole_prophylaxis,Currently on cotrimoxazole,Yes / No / N/A,
+Baseline (2025),tb_history,Ever treated for tuberculosis,Yes / No,
+Baseline (2025),tb_preventive_therapy_ever,Ever received TB preventive therapy,Yes / No / N/A,
+Baseline (2025),family_history_hypertension,First-degree relative with hypertension,Yes / No,
+Baseline (2025),family_history_diabetes,First-degree relative with diabetes,Yes / No,
+Baseline (2025),hypertension_diagnosed,Ever told by health worker they have hypertension,Yes / No,Self-report (awareness)
+Baseline (2025),on_antihypertensives,Currently taking BP medication,Yes / No,
+Baseline (2025),diabetes_diagnosed,Ever told they have diabetes,Yes / No,Self-report (awareness)
+Baseline (2025),on_diabetes_medication,Currently taking glucose-lowering medication,Yes / No,
+Baseline (2025),asthma_history,Ever diagnosed with asthma,Yes / No,
+Baseline (2025),copd_history,Ever diagnosed with COPD/chronic bronchitis,Yes / No,
+Baseline (2025),stroke_history,Ever had a stroke,Yes / No,
+Baseline (2025),heart_disease_history,Ever diagnosed with heart disease/heart attack,Yes / No,
+Baseline (2025),kidney_disease_diagnosed,Ever told they have kidney disease,Yes / No,
+Baseline (2025),cancer_history,Ever diagnosed with cancer,Yes / No,
+Baseline (2025),epilepsy_history,Ever diagnosed with epilepsy,Yes / No,
+Baseline (2025),depression_diagnosed,Ever diagnosed with depression,Yes / No,
+Baseline (2025),cervical_cancer_screened_ever,Ever screened for cervical cancer (women 25+),Yes / No / N/A,
+Baseline (2025),current_medications,All current medications,Semicolon-separated list,'None' if none
+Baseline (2025),on_statin,Currently taking a statin,Yes / No,
+Baseline (2025),on_antidepressant,Currently taking an antidepressant,Yes / No,
+Baseline (2025),last_bp_check,Last time BP measured by health worker,Within past 12 months / More than 12 months ago / Never,
+Baseline (2025),last_blood_glucose_check,Last time blood glucose measured,Within past 12 months / More than 12 months ago / Never,
+Baseline (2025),current_tobacco_smoker,Currently smokes tobacco,Yes / No,
+Baseline (2025),cigarettes_per_day,Cigarettes smoked per day,count,Smokers only
+Baseline (2025),current_alcohol_use,Drank alcohol in past 12 months,Yes / No,
+Baseline (2025),audit_c_score,AUDIT-C alcohol score,0-12,"Hazardous: men >=4, women >=3"
+Baseline (2025),fruit_days_per_week,Days per week fruit eaten,0-7,WHO STEPS item
+Baseline (2025),fruit_servings_per_day,Fruit servings on a typical day,servings,~1.5% missing
+Baseline (2025),vegetable_days_per_week,Days per week vegetables eaten,0-7,
+Baseline (2025),vegetable_servings_per_day,Vegetable servings on a typical day,servings,
+Baseline (2025),salt_added_at_table,Adds salt to food at the table,Never / Rarely / Sometimes / Often / Always,
+Baseline (2025),processed_salty_food_freq,Eats processed food high in salt,Never / Rarely / Sometimes / Often / Always,
+Baseline (2025),sugary_drinks_per_week,Sugar-sweetened drinks per week,count,
+Baseline (2025),fried_food_days_per_week,Days per week eating fried food,0-7,
+Baseline (2025),meat_days_per_week,Days per week eating red meat,0-7,
+Baseline (2025),main_staple,Main staple starch,Categories,
+Baseline (2025),vigorous_pa_min_week,Vigorous physical activity,minutes/week,GPAQ-based
+Baseline (2025),moderate_pa_min_week,Moderate activity incl. walking/cycling for transport,minutes/week,GPAQ-based
+Baseline (2025),total_pa_met_min_week,Total physical activity,MET-min/week,= 8 x vigorous + 4 x moderate; WHO target >=600; ~2% missing
+Baseline (2025),sedentary_hours_per_day,Time spent sitting on a typical day,hours,
+Baseline (2025),sleep_hours_per_night,Usual sleep duration,hours,
+Baseline (2025),phq9_score,PHQ-9 depression score,0-27,>=10 = probable depression
+Baseline (2025),phq9_item9_self_harm_thoughts,PHQ-9 item 9: thoughts of self-harm,0-3,
+Baseline (2025),phq9_category,PHQ-9 severity,Minimal / Mild / Moderate / Moderately severe / Severe,
+Baseline (2025),gad7_score,GAD-7 anxiety score,0-21,>=10 = probable anxiety; ~1% missing
+Baseline (2025),gad7_category,GAD-7 severity,Minimal / Mild / Moderate / Severe,
+Baseline (2025),ssq14_score,Shona Symptom Questionnaire (SSQ-14),0-14,>=8 = probable common mental disorder
+Baseline (2025),self_rated_health,Self-rated health,Very good / Good / Moderate / Bad / Very bad,
+Baseline (2025),height_cm,Height,cm,
+Baseline (2025),weight_kg,Weight,kg,
+Baseline (2025),bmi_kg_m2,Body mass index,kg/m²,Derived
+Baseline (2025),bmi_category,WHO BMI category,Underweight / Normal / Overweight / Obese,
+Baseline (2025),waist_cm,Waist circumference,cm,~1.5% missing
+Baseline (2025),hip_cm,Hip circumference,cm,~1.5% missing
+Baseline (2025),waist_hip_ratio,Waist-to-hip ratio,ratio,
+Baseline (2025),sbp_1,"Systolic BP, reading 1",mmHg,
+Baseline (2025),dbp_1,"Diastolic BP, reading 1",mmHg,
+Baseline (2025),sbp_2,"Systolic BP, reading 2",mmHg,
+Baseline (2025),dbp_2,"Diastolic BP, reading 2",mmHg,
+Baseline (2025),sbp_3,"Systolic BP, reading 3",mmHg,
+Baseline (2025),dbp_3,"Diastolic BP, reading 3",mmHg,
+Baseline (2025),sbp_mean,Mean systolic BP of readings 2 and 3,mmHg,WHO STEPS method
+Baseline (2025),dbp_mean,Mean diastolic BP of readings 2 and 3,mmHg,
+Baseline (2025),pulse_bpm,Resting pulse,beats/min,
+Baseline (2025),blood_sample_collected,Venous blood sample obtained,Yes / No,"If No, lab values are blank (~6%)"
+Baseline (2025),fasting_glucose_mmol_l,Fasting plasma glucose,mmol/L,>=7.0 = diabetes
+Baseline (2025),hba1c_percent,Glycated haemoglobin,%,>=6.5 = diabetes
+Baseline (2025),total_cholesterol_mmol_l,Total cholesterol,mmol/L,>=5.0 raised
+Baseline (2025),hdl_mmol_l,HDL cholesterol,mmol/L,
+Baseline (2025),ldl_mmol_l,LDL cholesterol (Friedewald),mmol/L,
+Baseline (2025),triglycerides_mmol_l,Triglycerides,mmol/L,
+Baseline (2025),creatinine_umol_l,Serum creatinine,µmol/L,
+Baseline (2025),egfr_ml_min_1_73m2,Estimated GFR (CKD-EPI 2021),mL/min/1.73m²,<60 = reduced kidney function
+Baseline (2025),urine_protein_dipstick,Urine protein on dipstick,Negative / Trace / 1+ / 2+ / 3+,~3% missing
+Baseline (2025),haemoglobin_g_dl,Haemoglobin,g/dL,
+Baseline (2025),alt_u_l,Alanine aminotransferase,U/L,
+Baseline (2025),hypertension,Hypertension (mean SBP>=140 or DBP>=90 or on medication),Yes / No,Composite outcome
+Baseline (2025),diabetes,Diabetes (FPG>=7.0 or HbA1c>=6.5 or on medication),Yes / No,Blank if no blood and not on treatment
+Follow-up (2026),fu_status,Follow-up outcome,Completed / Lost to follow-up / Died,Simulated follow-up visit Apr–Sep 2026; data closed 15 Sep 2026
+Follow-up (2026),fu_visit_date,Date of follow-up visit,YYYY-MM-DD,Blank if died or lost to follow-up
+Follow-up (2026),fu_date_of_death,Date of death,YYYY-MM-DD,Blank unless fu_status = Died
+Follow-up (2026),fu_end_date,End of follow-up,YYYY-MM-DD,"Visit date, date of death, or baseline interview date if lost to follow-up"
+Follow-up (2026),fu_followup_months,Time from baseline interview to fu_end_date,months,Use for person-time; 0 for those lost to follow-up
+Follow-up (2026),fu_sbp_mean,Systolic BP at follow-up (mean of readings 2 and 3),mmHg,Completed follow-up only
+Follow-up (2026),fu_dbp_mean,Diastolic BP at follow-up,mmHg,Completed follow-up only
+Follow-up (2026),fu_on_antihypertensives,Taking BP medication at follow-up,Yes / No,
+Follow-up (2026),fu_hypertension,Hypertension at follow-up (SBP>=140 or DBP>=90 or on medication),Yes / No,Incident case = No at baseline and Yes at follow-up
+Follow-up (2026),fu_weight_kg,Weight at follow-up,kg,
+Follow-up (2026),fu_bmi_kg_m2,BMI at follow-up,kg/m²,Uses baseline height
+Follow-up (2026),fu_blood_sample_collected,Blood sample obtained at follow-up,Yes / No,"If No, follow-up lab values are blank"
+Follow-up (2026),fu_fasting_glucose_mmol_l,Fasting plasma glucose at follow-up,mmol/L,>=7.0 = diabetes
+Follow-up (2026),fu_hba1c_percent,HbA1c at follow-up,%,>=6.5 = diabetes
+Follow-up (2026),fu_on_diabetes_medication,Taking glucose-lowering medication at follow-up,Yes / No,
+Follow-up (2026),fu_diabetes,Diabetes at follow-up (FPG>=7.0 or HbA1c>=6.5 or on medication),Yes / No,Blank if no blood and not on treatment
+Follow-up (2026),fu_phq9_score,PHQ-9 score at follow-up,0-27,>=10 = probable depression
+Follow-up (2026),fu_current_tobacco_smoker,Smokes tobacco at follow-up,Yes / No,
+Follow-up (2026),fu_hiv_test_result,HIV test result at follow-up,Positive / Negative,Baseline positives remain Positive
+Follow-up (2026),fu_hiv_seroconversion,New HIV infection since baseline,Yes / No / N/A,N/A if HIV-positive at baseline
+Follow-up (2026),fu_on_art,On ART at follow-up,Yes / No / N/A,N/A if HIV-negative
+Follow-up (2026),fu_viral_load_copies_ml,HIV-1 viral load at follow-up,copies/mL,20 = target not detected/<20; HIV-positive only
+Follow-up (2026),fu_viral_load_suppressed_lt1000,Viral load suppressed at follow-up (<1000 copies/mL),Yes / No / N/A,
+Follow-up (2026),fu_new_tb_diagnosis,New TB diagnosis since baseline,Yes / No,
