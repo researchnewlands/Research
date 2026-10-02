@@ -419,14 +419,75 @@
     <div id="assignment-content" 
         class="hidden border-t border-slate-200 p-5 space-y-3 bg-slate-50">
 
-        <a href="https://github.com/researchnewlands/Research/raw/refs/heads/main/Final_Assessment.pdf"
-           download="Final_AssessmentL.pdf"
+        <!-- ASSIGNMENT INSTRUCTIONS -->
+        <a href="https://raw.githubusercontent.com/researchnewlands/Research/main/Research%20Masterclass%20Final%20Assignment.pdf"
+           onclick="downloadFile(event, this.href, 'Research Masterclass Final Assignment.pdf')"
            class="block p-4 bg-white border border-slate-200 rounded hover:border-clinical-600 transition font-semibold">
 
             📄 Assignment | Research Masterclass Final Assignment
 
             <span class="block text-xs font-semibold text-slate-500 mt-1">
-                Download Assignment Instructions
+                Download Assignment Instructions (PDF)
+            </span>
+        </a>
+
+        <!-- ASSIGNMENT FILES -->
+        <p class="pt-3 text-[11px] font-extrabold uppercase text-slate-500 tracking-wider">
+            Assignment Files
+        </p>
+
+        <a href="https://raw.githubusercontent.com/researchnewlands/Research/main/NCD_HIV_cohort_dataset.csv"
+           onclick="downloadFile(event, this.href, 'NCD_HIV_cohort_dataset.csv')"
+           class="block p-4 bg-white border border-slate-200 rounded hover:border-clinical-600 transition font-semibold">
+
+            📊 NCD HIV Cohort Dataset
+
+            <span class="block text-xs font-semibold text-slate-500 mt-1">
+                Download Dataset (CSV)
+            </span>
+        </a>
+
+        <a href="https://raw.githubusercontent.com/researchnewlands/Research/main/NCD_HIV_cohort_dataset_description.docx"
+           onclick="downloadFile(event, this.href, 'NCD_HIV_cohort_dataset_description.docx')"
+           class="block p-4 bg-white border border-slate-200 rounded hover:border-clinical-600 transition font-semibold">
+
+            📝 NCD HIV Cohort Dataset Description
+
+            <span class="block text-xs font-semibold text-slate-500 mt-1">
+                Download Dataset Description (Word)
+            </span>
+        </a>
+
+        <a href="https://raw.githubusercontent.com/researchnewlands/Research/main/NCD_HIV_cohort_data_dictionary.csv"
+           onclick="downloadFile(event, this.href, 'NCD_HIV_cohort_data_dictionary.csv')"
+           class="block p-4 bg-white border border-slate-200 rounded hover:border-clinical-600 transition font-semibold">
+
+            📊 NCD HIV Cohort Dataset Data Dictionary
+
+            <span class="block text-xs font-semibold text-slate-500 mt-1">
+                Download Data Dictionary (CSV)
+            </span>
+        </a>
+
+        <a href="https://raw.githubusercontent.com/researchnewlands/Research/main/Annex_Calculator_and_Data_Tables.xlsx"
+           onclick="downloadFile(event, this.href, 'Annex_Calculator_and_Data_Tables.xlsx')"
+           class="block p-4 bg-white border border-slate-200 rounded hover:border-clinical-600 transition font-semibold">
+
+            📈 Annex | Calculator and Data Tables
+
+            <span class="block text-xs font-semibold text-slate-500 mt-1">
+                Download Calculator &amp; Data Tables (Excel)
+            </span>
+        </a>
+
+        <a href="https://raw.githubusercontent.com/researchnewlands/Research/main/Annex_Answer_Template.docx"
+           onclick="downloadFile(event, this.href, 'Annex_Answer_Template.docx')"
+           class="block p-4 bg-white border border-slate-200 rounded hover:border-clinical-600 transition font-semibold">
+
+            📝 Annex | Answer Template
+
+            <span class="block text-xs font-semibold text-slate-500 mt-1">
+                Download Answer Template (Word)
             </span>
         </a>
     </div>
@@ -459,6 +520,30 @@
                 content.classList.remove('hidden');
                 icon.style.transform = 'rotate(180deg)';
             }
+        }
+        // Force a direct download (instead of opening GitHub or a browser preview).
+        // Browsers ignore the "download" attribute for files on another site, so the
+        // file is fetched and saved locally. If that fails, the link opens normally.
+        function downloadFile(event, url, filename) {
+            event.preventDefault();
+            fetch(url)
+                .then(function (response) {
+                    if (!response.ok) throw new Error('Download failed');
+                    return response.blob();
+                })
+                .then(function (blob) {
+                    const blobUrl = URL.createObjectURL(blob);
+                    const link = document.createElement('a');
+                    link.href = blobUrl;
+                    link.download = filename;
+                    document.body.appendChild(link);
+                    link.click();
+                    link.remove();
+                    setTimeout(function () { URL.revokeObjectURL(blobUrl); }, 1000);
+                })
+                .catch(function () {
+                    window.location.href = url;
+                });
         }
     </script>
 </body>
