@@ -368,7 +368,6 @@
     </div>
 
 </div>
-</div>
             <!-- WEEK 12 -->
             <div class="bg-white border border-slate-200 rounded-lg shadow-sm overflow-hidden">
                 <button onclick="toggleWeek('week12')" class="w-full flex items-center justify-between p-5 text-left hover:bg-slate-50 transition">
@@ -382,12 +381,17 @@
                     <button onclick="checkPasskey('topic-12-notes.html')" class="w-full text-left p-4 bg-white border border-slate-200 rounded hover:border-clinical-600 transition font-semibold flex items-center gap-2">
                         🔒 Reading Notes | Measures of Associations
                     </button>
-                    <div class="p-4 bg-white border border-dashed border-slate-300 rounded text-slate-400 font-semibold">
-                        📑 Lecture Slides | Measures of Associations <span class="text-xs font-normal">(link coming soon)</span>
-                    </div>
-                    <div class="p-4 bg-white border border-dashed border-slate-300 rounded text-slate-400 font-semibold">
-                        🎥 Live Session | Zoom Recording <span class="text-xs font-normal">(link coming soon)</span>
-                    </div>
+                    <a href="https://raw.githubusercontent.com/researchnewlands/Research/main/Module%202%20Topic%206%20-%20Measures%20of%20Association.pptx"
+                       onclick="downloadFile(event, this.href, 'Module 2 Topic 6 - Measures of Association.pptx')"
+                       class="block p-4 bg-white border border-slate-200 rounded hover:border-clinical-600 transition font-semibold">
+                        📑 Lecture Slides | Measures of Associations
+                    </a>
+                    <a href="https://newlandsclinic-my.sharepoint.com/:v:/g/personal/research_newlandsclinic_org_zw/IQCws6PtWLQ6RIP_bUFdBNloAZ1dPmf3w6wTRo-UwlFwxqM?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=og25NI"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="block p-4 bg-white border border-slate-200 rounded hover:border-clinical-600 transition font-semibold">
+                        🎥 Live Session | Zoom Recording | Measures of Associations
+                    </a>
                     <button onclick="checkPasskey('grading-quiz.html')" class="w-full text-left p-4 bg-red-50 border-2 border-clinical-600 rounded hover:bg-white transition font-bold text-clinical-700">
                         🔒 Topic 12 Quiz
                         <span class="block text-xs font-semibold text-slate-500 mt-1">Due Sunday 4 October 2026, 11:59pm</span>
@@ -492,9 +496,7 @@
         </a>
     </div>
 </div>
-        
-</div>
-        
+
         </div>
     </main>
     <script>
