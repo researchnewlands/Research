@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Material | Research Masterclass – Cohort 2</title>
+    <script>
+        // Send anyone who hasn't signed in as a Cohort 2 student back to the portal.
+        (function () {
+            var s = null;
+            try { s = JSON.parse(sessionStorage.getItem("rmc_session") || "null"); } catch (e) {}
+            if (!s || s.cohort !== 2) window.location.replace("course-material-hub.html");
+        })();
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { clinical: { 600: '#cc0a0a', 700: '#b00808' } } } }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans">
+  <nav class="bg-white p-6 shadow-sm flex items-center justify-between">
+    <a href="index.html" class="flex items-center space-x-3">
+        <img src="nc-logo.png" alt="Newlands Clinic Logo" class="h-16 w-auto">
+    </a>
+    <div class="flex items-center space-x-8">
+        <a href="index.html" class="hidden lg:inline text-sm uppercase tracking-wider font-semibold text-slate-600 hover:text-clinical-600 transition">Home</a>
+        <a href="cohort-2-materials.html" class="hidden lg:inline text-sm uppercase tracking-wider font-semibold text-clinical-600 transition">Course Material</a>
+        <button onclick="signOut()" class="text-sm uppercase tracking-wider font-semibold text-slate-600 hover:text-clinical-600 transition">Sign out</button>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto py-12 px-6">
+    <span class="text-[11px] font-extrabold uppercase text-clinical-600 tracking-wider">Cohort 2 &nbsp;•&nbsp; 20 October – 7 December 2026</span>
+    <h1 class="text-3xl font-bold mb-2 mt-1 text-slate-900">Course Curriculum</h1>
+    <p id="welcome" class="text-slate-500 mb-6">Two live sessions per week, Tuesdays and Thursdays.</p>
+
+    <!-- LIVE SESSION ZOOM LINK -->
+    <div class="p-4 mb-10 bg-red-50 border border-clinical-600/30 rounded-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+        <div>
+            <span class="block font-bold text-slate-900">🎥 Live Sessions on Zoom</span>
+            <span class="block text-xs text-slate-500 mt-0.5">Tuesdays &amp; Thursdays · Sessions are not recorded, so please join live.</span>
+        </div>
+        <a href="https://us06web.zoom.us/j/89758279706?pwd=n6I3z17mEkl4VYXHXcYPbP6Y2LbreT.1" target="_blank" rel="noopener noreferrer"
+           class="shrink-0 px-5 py-2.5 bg-clinical-600 hover:bg-clinical-700 text-white text-xs uppercase tracking-wider font-bold rounded shadow-sm transition">
+            Join Live Session
+        </a>
+    </div>
+
+    <!-- ==================== MATERIALS SECTION ==================== -->
+    <h2 class="text-2xl font-bold mb-6 text-slate-900 border-b-2 border-clinical-600 pb-2">Materials</h2>
+    <div class="bg-slate-100 p-8 rounded-xl border border-slate-200 mb-12">
+        <h3 class="text-lg font-bold mb-4 text-slate-800">Supplemental Resources</h3>
+        <a href="A-Dictionary-of-Epidemiology-Oxford-University-Press-2014.pdf" class="inline-block w-full md:w-auto px-6 py-3 bg-white border border-slate-300 rounded shadow-sm hover:border-clinical-600 transition font-medium text-slate-700">
+            📖 A Dictionary of Epidemiology (2014)
+        </a>
+    </div>
+
+    <!-- Sessions are built from the SESSIONS list in the script at the bottom of this page -->
+    <div id="curriculum"></div>
+
+    <!-- ==================== FINAL ASSESSMENT ==================== -->
+    <h2 class="text-2xl font-bold mb-6 text-slate-900 border-b-2 border-clinical-600 pb-2">Final Assessment</h2>
+    <div class="bg-white border border-dashed border-slate-300 rounded-lg p-6 mb-12">
+        <span class="text-[11px] font-extrabold uppercase text-slate-500 tracking-wider">Date to be announced</span>
+        <h3 class="font-bold text-lg text-slate-900 mt-1">Research Masterclass Final Assessment</h3>
+        <p class="text-sm text-slate-500 mt-2">The assessment instructions and files will be uploaded here and announced to the class.</p>
+    </div>
+  </main>
+
+  <script>
+    /* =================================================================
+       SESSION LIST — edit dates, titles or links here.
+       slides: link to the slide file (leave "" if not ready yet)
+       notes:  reading-notes page (leave "" if none)
+       quizDue: shown under the quiz button ("" = no quiz)
+       ================================================================= */
+    const GH = "https://raw.githubusercontent.com/researchnewlands/Research/main/";
+
+    const SESSIONS = [
+        { module: 0, n: 0,  date: "Tuesday 20 October 2026",   title: "Welcome to Research Masterclass",
+          intro: "Live introduction session", notes: "", slides: "", quizDue: "" },
+
+        { module: 1, n: 1,  date: "Thursday 22 October 2026",  title: "Fundamentals of Epidemiology",
+          notes: "topic-1-notes.html", slides: GH + "Topic1-Introduction-to-Fundamentals-of-Epidemiology.pdf",
+          quizDue: "Wednesday 28 October 2026" },
+        { module: 1, n: 2,  date: "Tuesday 27 October 2026",   title: "The Epidemiological Focus",
+          notes: "topic-2-notes.html", slides: GH + "Module%201_Topic%202_%20Epidemiological_Focus.pptx",
+          quizDue: "Monday 2 November 2026" },
+        { module: 1, n: 3,  date: "Thursday 29 October 2026",  title: "Measures of Disease Occurrence",
+          notes: "topic-3-notes.html", slides: GH + "Topic3-Measures-of-Disease-Occurrence.pptx",
+          quizDue: "Wednesday 4 November 2026" },
+        { module: 1, n: 4,  date: "Tuesday 3 November 2026",   title: "Using Routine Health Data for Research",
+          notes: "topic-4-notes.html", slides: GH + "Topic4-Routine%20Data.pptx",
+          quizDue: "Monday 9 November 2026" },
+        { module: 1, n: 5,  date: "Thursday 5 November 2026",  title: "Measures of Effect and Impact",
+          notes: "topic-5-notes.html", slides: GH + "Topic5-Measures-of-Effect-and-Impact.pptx",
+          quizDue: "Wednesday 11 November 2026" },
+        { module: 1, n: 6,  date: "Tuesday 10 November 2026",  title: "Overview of Study Designs",
+          notes: "topic-6-notes.html", slides: GH + "Topic6-Overview-of-Study-Designs.pptx",
+          quizDue: "Monday 16 November 2026" },
+
+        { module: 2, n: 7,  date: "Thursday 12 November 2026", title: "Introduction to Statistics for Epidemiology",
+          notes: "topic-7-notes.html", slides: GH + "Module2-Topic1-Introduction-to-Statistics.pptx",
+          quizDue: "Wednesday 18 November 2026" },
+        { module: 2, n: 8,  date: "Tuesday 17 November 2026",  title: "Data Types, Summary, & Presentation",
+          notes: "topic-8-notes.html", slides: GH + "Topic2_DataTypesSummary_Slides%20circulate.pptx",
+          quizDue: "Monday 23 November 2026" },
+        { module: 2, n: 9,  date: "Thursday 19 November 2026", title: "Probability Theory & Statistical Distributions",
+          notes: "topic-9-notes.html", slides: GH + "Module2Topic%203_Probability_Theory_%26_Statistical%20Distributions.pptx",
+          quizDue: "Wednesday 25 November 2026" },
+        { module: 2, n: 10, date: "Tuesday 24 November 2026",  title: "Principles of Statistical Inference and Hypothesis Testing",
+          notes: "topic-10-notes.html", slides: GH + "Module%202%20Topic%204%20-%20Statistical%20Inference.pptx",
+          quizDue: "Monday 30 November 2026" },
+        { module: 2, n: 11, date: "Thursday 26 November 2026", title: "Comparing Means & Proportions",
+          notes: "topic-11-notes.html", slides: GH + "Module%202%20Topic%205%20-%20Means%20%26%20Proportions.pptx",
+          quizDue: "Wednesday 2 December 2026" },
+        { module: 2, n: 12, date: "Tuesday 1 December 2026",   title: "Measures of Associations",
+          notes: "topic-12-notes.html", slides: GH + "Module%202%20Topic%206%20-%20Measures%20of%20Association.pptx",
+          quizDue: "Monday 7 December 2026" }
+    ];
+
+    const MODULES = {
+        0: "Orientation",
+        1: "Module 1: Mastery of Research Design and Epidemiology",
+        2: "Module 2: Applied Statistical Literacy"
+    };
+
+    function esc(s) {
+        return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+    }
+
+    function fileName(url) {
+        return decodeURIComponent(url.split("/").pop());
+    }
+
+    function sessionCard(s) {
+        const id = "session" + s.n;
+        let items = "";
+
+        if (s.intro) {
+            items += `<div class="p-4 bg-white border border-slate-200 rounded font-semibold">
+                🎙️ ${esc(s.intro)}
+                <span class="block text-xs font-normal text-slate-500 mt-1">${esc(s.date)}</span>
+            </div>`;
+        }
+        if (s.notes) {
+            items += `<a href="${esc(s.notes)}" class="block p-4 bg-white border border-slate-200 rounded hover:border-clinical-600 transition font-semibold">
+                📘 Reading Notes | ${esc(s.title)}
+            </a>`;
+        }
+        if (s.slides) {
+            items += `<a href="${esc(s.slides)}" onclick="downloadFile(event, this.href, '${esc(fileName(s.slides))}')"
+                class="block p-4 bg-white border border-slate-200 rounded hover:border-clinical-600 transition font-semibold">
+                📑 Lecture Slides | ${esc(s.title)}
+            </a>`;
+        }
+        if (s.n > 0) {
+            items += `<div class="p-4 bg-slate-100 border border-dashed border-slate-300 rounded text-slate-500 font-medium">
+                🎥 Zoom recordings are not available for this cohort — please attend the live session.
+            </div>`;
+        }
+        if (s.quizDue) {
+            items += `<a href="grading-quiz.html" class="block p-4 bg-red-50 border-2 border-clinical-600 rounded hover:bg-white transition font-bold text-clinical-700">
+                📝 Session ${s.n} Quiz
+                <span class="block text-xs font-semibold text-slate-500 mt-1">Due ${esc(s.quizDue)}, 11:59pm</span>
+            </a>`;
+        }
+
+        return `<div class="bg-white border border-slate-200 rounded-lg shadow-sm overflow-hidden">
+            <button onclick="toggleWeek('${id}')" class="w-full flex items-center justify-between p-5 text-left hover:bg-slate-50 transition">
+                <div>
+                    <span class="text-[11px] font-extrabold uppercase text-clinical-600 tracking-wider">Session ${s.n} &nbsp;•&nbsp; ${esc(s.date)}</span>
+                    <h3 class="font-bold text-lg text-slate-900 mt-1">${esc(s.title)}</h3>
+                </div>
+                <span id="${id}-icon" class="text-slate-400 text-xl transition-transform duration-200">▾</span>
+            </button>
+            <div id="${id}-content" class="hidden border-t border-slate-200 p-5 space-y-3 bg-slate-50">${items}</div>
+        </div>`;
+    }
+
+    (function render() {
+        let html = "";
+        Object.keys(MODULES).forEach(m => {
+            const list = SESSIONS.filter(s => String(s.module) === m);
+            if (!list.length) return;
+            html += `<h2 class="text-2xl font-bold mb-6 text-slate-900 border-b-2 border-clinical-600 pb-2">${esc(MODULES[m])}</h2>
+                     <div class="space-y-4 mb-12">${list.map(sessionCard).join("")}</div>`;
+        });
+        document.getElementById("curriculum").innerHTML = html;
+
+        try {
+            const s = JSON.parse(sessionStorage.getItem("rmc_session") || "null");
+            if (s && s.user) document.getElementById("welcome").textContent =
+                "Signed in as " + s.user + " · Two live sessions per week, Tuesdays and Thursdays.";
+        } catch (e) {}
+    })();
+
+    function signOut() {
+        try { sessionStorage.removeItem("rmc_session"); } catch (e) {}
+        window.location.href = "course-material-hub.html";
+    }
+
+    // Accordion toggle for session dropdowns
+    function toggleWeek(id) {
+        const content = document.getElementById(id + "-content");
+        const icon = document.getElementById(id + "-icon");
+        const isOpen = !content.classList.contains("hidden");
+        content.classList.toggle("hidden", isOpen);
+        icon.style.transform = isOpen ? "rotate(0deg)" : "rotate(180deg)";
+    }
+
+    // Force a direct download; if that fails, the link opens normally.
+    function downloadFile(event, url, filename) {
+        event.preventDefault();
+        fetch(url)
+            .then(r => { if (!r.ok) throw new Error("Download failed"); return r.blob(); })
+            .then(blob => {
+                const blobUrl = URL.createObjectURL(blob);
+                const link = document.createElement("a");
+                link.href = blobUrl;
+                link.download = filename;
+                document.body.appendChild(link);
+                link.click();
+                link.remove();
+                setTimeout(() => URL.revokeObjectURL(blobUrl), 1000);
+            })
+            .catch(() => { window.location.href = url; });
+    }
+  </script>
+</body>
+</html>
