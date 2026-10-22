@@ -5,10 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Course Material | Research Masterclass – Cohort 2</title>
     <script>
+        function readSession() {
+            try { var v = sessionStorage.getItem("rmc_session"); if (v) return JSON.parse(v); } catch (e) {}
+            try {
+                var m = document.cookie.match(/(?:^|; )rmc_session=([^;]*)/);
+                if (m) return JSON.parse(decodeURIComponent(m[1]));
+            } catch (e) {}
+            return null;
+        }
         // Send anyone who hasn't signed in as a Cohort 2 student back to the portal.
         (function () {
-            var s = null;
-            try { s = JSON.parse(sessionStorage.getItem("rmc_session") || "null"); } catch (e) {}
+            var s = readSession();
             if (!s || s.cohort !== 2) window.location.replace("course-material-hub.html");
         })();
     </script>
@@ -212,7 +219,7 @@
         document.getElementById("curriculum").innerHTML = html;
 
         try {
-            const s = JSON.parse(sessionStorage.getItem("rmc_session") || "null");
+            const s = readSession();
             if (s && s.user) document.getElementById("welcome").textContent =
                 "Signed in as " + s.user + " · Two live sessions per week, Tuesdays and Thursdays.";
         } catch (e) {}
@@ -220,6 +227,7 @@
 
     function signOut() {
         try { sessionStorage.removeItem("rmc_session"); } catch (e) {}
+        try { document.cookie = "rmc_session=; path=/; max-age=0"; } catch (e) {}
         window.location.href = "course-material-hub.html";
     }
 
