@@ -1,59 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <!-- Botpress Webchat Injection Scripts -->
-    <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
-    <script src="https://files.bpcontent.cloud/2026/06/25/09/20260625095541-9UXJJ8UK.js" defer></script>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research Masterclass for Clinicians - Portfolio & Syllabus Hub</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Site styles (ready-made, so phones don't have to build them on every visit) -->
+    <link rel="stylesheet" href="site.css">
     <!-- Google Fonts: Playfair Display (Editorial Serif) & Inter (Clean Sans) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght=300;400;500;600;700;800&family=Playfair+Display:ital,wght=0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet"></noscript>
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                    },
-                    colors: {
-                        clinical: {
-                            50: '#fff5f5',
-                            100: '#ffe3e3',
-                            200: '#ffc9c9',
-                            300: '#ffa3a3',
-                            400: '#ff6b6b',
-                            500: '#fa5252',
-                            600: '#cc0a0a', /* Exact Chatbot Red */
-                            700: '#b00808', /* Deeper interactive hover state */
-                            800: '#820505',
-                            900: '#4a0202',
-                        },
-                        navy: {
-                            50: '#f0f4f8',
-                            100: '#d9e2ec',
-                            200: '#bcccdc',
-                            300: '#9fb3c8',
-                            450: '#627d98',
-                            600: '#334e68',
-                            700: '#243b53',
-                            800: '#102a43', 
-                            900: '#0b1b2b', 
-                            950: '#06101a',
-                        }
-                    }
-                }
-            }
-        }
         // Simple Single Page App View Router
         function switchView(viewId) {
             const homeView = document.getElementById('home-view');
@@ -431,5 +392,8 @@
             <p class="text-slate-600">Harare, Zimbabwe.</p>
         </div>
     </footer>
+    <!-- Botpress Webchat (loads after the page is showing, so a slow chat server can't hold up the site) -->
+    <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js" defer></script>
+    <script src="https://files.bpcontent.cloud/2026/06/25/09/20260625095541-9UXJJ8UK.js" defer></script>
 </body>
 </html>
